@@ -12,11 +12,11 @@
 <head>
     <title>Title</title>
     <link href="/resources/css/reset.css?ver=1" rel="stylesheet" type="text/css">
-    <link href="/resources/css/text.css?ver=1" rel="stylesheet" type="text/css">
+    <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=1" rel="stylesheet" type="text/css">
     <link href="/resources/css/header.css?ver=1" rel="stylesheet" type="text/css">
     <link href="/resources/css/footer.css?ver=1" rel="stylesheet" type="text/css">
-    <link href="/resources/css/main.css?ver=1" rel="stylesheet" type="text/css">
+    <link href="/resources/css/main.css?ver=2" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,36 +37,74 @@
 				<c:choose>
 					<c:when test="${sessionScope.customer_id == null}">
 						<a href="login" class="list-txt">로그인</a>
+		            	<a class="list-txt" href="join">회원가입</a>
 					</c:when>
 					<c:when test="${sessionScope.customer_id != null}">
-<%--						<div>${sessionScope.customer_id}님 반갑습니다</div>--%>
+						<a href="#" class="list-txt">${sessionScope.customer_id}님 반갑습니다</a>
 						<a href="logout" class="list-txt">로그아웃</a>
 					</c:when>
 				</c:choose>
-            	<a class="list-txt" href="join">회원가입</a>
             	<a class="list-txt" href="#">고객센터</a>
             </div>
         </div>
     </header>
     
     <nav>
-        <div class="nav-list">
+        <div class="dropmenu">
             <ul>
-                <li><a href="#">영화</a></li>
-                <li><a href="ticketing">예매</a></li>
-                <li><a href="#">극장</a></li>
-                <li><a href="#">이벤트</a></li>
-                <li><a href="#">혜택</a></li>
+                <li>
+                	<a href="#">영화</a>
+                	<ul>
+                		<li><a href="#">현재상영작</a></li>
+                		<li><a href="#">상영예정작</a></li>
+                	</ul>
+                </li>
+                <li>
+                	<a href="ticketing">예매</a>
+                	<ul>
+                		<li><a href="#">빠른예매</a></li>
+                		<li><a href="#">상영시간표</a></li>
+                	</ul>
+                </li>
+                <li>
+                	<a href="#">극장</a>
+                	<ul>
+                		<li><a href="#">전체극장</a></li>
+                		<li><a href="#">특별관</a></li>
+                	</ul>
+                </li>
+                <li>
+                	<a href="#">이벤트</a>
+                	<ul>
+                		<li><a href="#">영화/예매</a></li>
+                		<li><a href="#">당첨자발표</a></li>
+                		<li><a href="#">종료 이벤트</a></li>
+                	</ul>
+                </li>
+                <li>
+                	<a href="#">혜택</a>
+                	<ul>
+                		<li><a href="#">멤버십/CLUB</a></li>
+                		<li><a href="#">제휴할인</a></li>
+                	</ul>
+                </li>
             </ul>
         </div>
     </nav>
     
-    <section class="main-banner">
-    	<div class="main-banner_inner">
-    		<img src="">
-    		<div class="inner_content">
-	    		<h1>영화 제목</h1>
-	    		<p>줄거리</p>
+    <section class="banner">
+    	<div class="banner_inner">
+<!--     		<div class="banner_video"> -->
+<!--     			<video src="resource/img/main-video.mp4"> -->
+<!--     				<source src="resource/img/main-video.mp4"> -->
+<!--     			</video> -->
+<!--     		</div> -->
+			<div class="banner_content">
+	    		<h1 class="content_title">인민을 위해 복무하라</h1>
+	    		<p class="content_text">
+	    			노벨문학상 후보 작가 원작 <br/>
+	    			전 세계가 주목한 화제의 금서
+	    		</p>
     		</div>
     	</div>
     </section>
@@ -82,17 +120,13 @@
     		<h1 class="news_title title-txt">소식</h1>
     		<div class="news_content">
 	    		<div class="content_notice">
-<!--     				<a href="#"> -->
-	    				<p class="notice_title main-txt">공지사항</p>
-	    				<p class="notice_content content-txt">여기는 공지사항이 들어가는 자리입니다.</p>
-<!--     				</a> -->
+    				<p class="notice_title main-txt">공지사항</p>
+    				<p class="notice_content content-txt">[기타] 22년 VIP 선정 기준 변경 및 추가 기준 관련 안내</p>
 	    		</div>
     			<div class="content_service-center">
-<!--     				<a href="#"> -->
-    					<p class="service-center_title main-txt">고객센터</p>
-	    				<p class="service-center_content content-txt">1234-1234</p>
-	    				<p class="service-center_content content-txt">운영시간(평일 00:00 ~ 00:00)</p>
-<!--     				</a> -->
+   					<p class="service-center_title main-txt">고객센터</p>
+    				<p class="service-center_content content-txt">1234-1234</p>
+    				<p class="service-center_content content-txt">운영시간(평일 00:00 ~ 00:00)</p>
     			</div>
     		</div>
     	</div>
