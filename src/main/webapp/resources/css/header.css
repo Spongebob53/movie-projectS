@@ -1,28 +1,30 @@
 /****** header, nav css ******/
 header {
-    padding: 0 300px;
-    border-bottom: 0.5px solid rgb(90, 74, 227);
-    font-family: 'Noto Sans KR', sans-serif;
-    text-align: center;
+	padding: 0 300px;
+	border-bottom: 0.5px solid rgb(90, 74, 227);
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: center;
 }
+
 nav {
-    padding: 0 300px;
-    border-bottom: 1px solid rgb(90, 74, 227);
-    font-family: 'Noto Sans KR', sans-serif;
-    text-align: center;
+	padding: 0 300px;
+	border-bottom: 1px solid rgb(90, 74, 227);
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: center;
 }
 
 .header {
-    padding: 20px 0 20px;
-    text-align: center;
+	padding: 20px 0 20px;
+	overflow: auto;
 }
 
 .header-inner {
-    display: inline-block;
+	display: inline-block;
 }
 
 .header-logo {
-	margin-right: -50px;
+	float: left;
+	margin-left: 400px;
 }
 
 .header-search {
@@ -39,27 +41,140 @@ nav {
 .header-member a {
 	padding: 0 7px;
 }
+
 .header-member a:hover {
 	color: rgb(90, 74, 227);
 }
 
-.nav-list ul li {	
-    display: inline-block;
-    padding: 13px 0;
+.dropmenu ul {
+	height: 45px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-.nav-list ul li:hover {	
-   background-color: red;
+.dropmenu li {
+	float: left;
+	padding: 0px;
+	width: 225px;
 }
 
-.nav-list ul li a {	
-/*     font-weight: 500; */
-    padding: 13px 95px;
+.dropmenu li a {
+	color: rgb(90, 74, 227);
+	display: block;
+	line-height: 45px;
+	margin: 0px;
+	padding: 0px 25px;
+	text-align: center;
+	text-decoration: none;
 }
 
-.nav-list ul li a:hover {	
-    font-weight: 500;
-    color: white;
+.dropmenu li a:hover, .dropmenu ul li:hover a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.dropmenu li ul {
+	background-color: white;
+	display: none;
+	height: auto;
+	border-top: 1px solid rgb(90, 74, 227);
+	position: absolute;
+	width: 225px;
+	z-index: 200;
+}
+
+.dropmenu li:hover ul {
+	display: block;
+}
+
+.dropmenu li li {
+	background-color: white;
+	display: block;
+	float: none;
+	margin: 0px;
+	padding: 0px;
+	width: 225px;
+}
+
+.dropmenu li:hover li a {
+	background: none;
+}
+
+.dropmenu li ul a {
+	display: block;
+	height: 45px;
+	font-size: 14px;
+	margin: 0px;
+	padding: 0px 10px 0px 15px;
+	text-align: center;
+}
+
+.dropmenu li ul a:hover, .dropmenu li ul li:hover a {
+	background: rgba(90, 74, 227, 0.9);
+	border: 0px;
+	color: white;
+	text-decoration: none;
+}
+
+.dropmenu p {
+	clear: left;
+}
+
+/* .nav-list ul li {	 */
+/*     display: inline-block; */
+/*     padding: 13px 0; */
+/* } */
+
+/* .nav-list ul li:hover {	 */
+/*    background-color: red; */
+/* } */
+
+/* .nav-list ul li a {	 */
+/* /*     font-weight: 500; */
+* /
+	/*     padding: 11px 95px; */
+	/* } */
+	/* .nav-list ul li a:hover {	 */
+	/*     font-weight: 500; */
+	/*     color: white; */
+	/* } */ 
+.nav-list li ul {
+	background: red;
+	display: none;
+	height: auto;
+	border: 0px;
+	position: absolute;
+	width: 200px;
+	z-index: 200;
+	/*top:1em;
+/*left:0;*/
+}
+
+.nav-list li:hover ul {
+	display: block;
+}
+
+.nav-list li li {
+	background: red;
+	display: block;
+	float: none;
+	margin: 0px;
+	padding: 0px;
+	width: 200px;
+}
+
+.nav-list li:hover li a {
+	background: none;
+}
+
+.nav-list li ul a {
+	display: block;
+	height: 80px;
+	font-size: 14px;
+	margin: 0px;
+	padding: 0px 10px 0px 15px;
+	text-align: left;
 }
 
 i {
