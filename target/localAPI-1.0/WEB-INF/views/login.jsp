@@ -6,7 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% request.setCharacterEncoding("UTF-8"); %>
 <%
     // 아이디 저장 쿠키 유무 확인
     Cookie[] cookies = request.getCookies();

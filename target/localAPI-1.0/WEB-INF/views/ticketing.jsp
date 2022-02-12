@@ -3,8 +3,7 @@
 <%@ page import="model.company.TheaterVO" %>
 <%@ page import="model.company.Movie_showVO" %>
 <%@ page import="java.util.List" %>
-<%@ page import="model.movie.MovieVO" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="model.movie.MovieVO" %><%--
   Created by IntelliJ IDEA.
   User: spongebob53
   Date: 2022/01/31
@@ -12,7 +11,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% request.setCharacterEncoding("UTF-8"); %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Ticketing</title>

@@ -19,6 +19,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	text-decoration: none;
 	color: black;
+	letter-spacing: -0.5px;
 }
 
 article, aside, details, figcaption, figure, 

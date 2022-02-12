@@ -1,19 +1,12 @@
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-
 .login {
-	text-align: center;
 	width: 400px;
 	margin: 0 auto;
 	padding: 0 50px;
-	font-family: 'Pretendard-Regular';
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 .login-logo {
+	text-align: center;
 	padding-top: 100px;
 	margin: 0 auto;
 }

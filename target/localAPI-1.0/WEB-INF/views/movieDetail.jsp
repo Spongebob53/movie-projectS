@@ -26,7 +26,7 @@ ${movie.movie_title}
 ${movie.movie_time}
 ${movie.movie_age}
 ${movie.movie_gerne}
-<a href="ticketing.jsp">예약 페이지</a>
-<a href="index.jsp">메인 페이지</a>
+<a href="ticketing">예약 페이지</a>
+<a href="/">메인 페이지</a>
 </body>
 </html>
