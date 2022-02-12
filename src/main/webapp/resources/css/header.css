@@ -1,0 +1,69 @@
+/****** header, nav css ******/
+header {
+    padding: 0 300px;
+    border-bottom: 0.5px solid rgb(90, 74, 227);
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+}
+nav {
+    padding: 0 300px;
+    border-bottom: 1px solid rgb(90, 74, 227);
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+}
+
+.header {
+    padding: 20px 0 20px;
+    text-align: center;
+}
+
+.header-inner {
+    display: inline-block;
+}
+
+.header-logo {
+	margin-right: -50px;
+}
+
+.header-search {
+	float: left;
+	margin-top: 15px;
+	padding: 3px;
+}
+
+.header-member {
+	float: right;
+	margin-top: 15px;
+}
+
+.header-member a {
+	padding: 0 7px;
+}
+.header-member a:hover {
+	color: rgb(90, 74, 227);
+}
+
+.nav-list ul li {	
+    display: inline-block;
+    padding: 13px 0;
+}
+
+.nav-list ul li:hover {	
+   background-color: rgb(90, 74, 227);
+}
+
+.nav-list ul li a {	
+/*     font-weight: 500; */
+    padding: 13px 95px;
+}
+
+.nav-list ul li a:hover {	
+    font-weight: 500;
+    color: white;
+}
+
+i {
+	font-size: 1.2rem;
+	padding: 5px;
+	color: #808080;
+}

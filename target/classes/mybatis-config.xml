@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <!--customer-->
+        <typeAlias alias="customer" type="com.teamD.movieP.domain.customer.CustomerVO"/>
+        <typeAlias alias="customerAd" type="com.teamD.movieP.domain.customer.CustomerAdVO"/>
+        <typeAlias alias="customerInfo" type="com.teamD.movieP.domain.customer.CustomerInfoVO"/>
+        <typeAlias alias="customerTerm" type="com.teamD.movieP.domain.customer.CustomerTermVO"/>
+
+        <!--movie-->
+        <typeAlias alias="movie" type="com.teamD.movieP.domain.movie.MovieVO"/>
+        <typeAlias alias="movieRate" type="com.teamD.movieP.domain.movie.Movie_ratingVO"/>
+
+        <!--theater-->
+        <typeAlias alias="theater" type="com.teamD.movieP.domain.theater.TheaterVO"/>
+        <typeAlias alias="theaterArea" type="com.teamD.movieP.domain.theater.AreaVO"/>
+        <typeAlias alias="theaterBook" type="com.teamD.movieP.domain.theater.BookVO"/>
+        <typeAlias alias="theaterShow" type="com.teamD.movieP.domain.theater.Movie_showVO"/>
+        <typeAlias alias="theaterRoom" type="com.teamD.movieP.domain.theater.RoomVO"/>
+    </typeAliases>
+</configuration>
+

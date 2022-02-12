@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="movie">
+    <!--영화 전체 불러오기-->
+    <select id="getMovieList" resultType="movie">
+        SELECT movie_id, movie_title
+        FROM movie
+    </select>
+
+    <!-- 영화 상세보기-->
+    <select id="getMovieDetail" parameterType="movie" resultType="movie">
+        SELECT *
+        FROM movie
+        WHERE movie_id = ${movie_id}
+    </select>
+</mapper>
