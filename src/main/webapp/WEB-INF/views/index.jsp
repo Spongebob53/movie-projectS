@@ -36,11 +36,11 @@
             <div class="header-inner header-member">
 				<c:choose>
 					<c:when test="${sessionScope.customer_id == null}">
-						<a href="login">로그인</a>
+						<a href="login" class="list-txt">로그인</a>
 					</c:when>
 					<c:when test="${sessionScope.customer_id != null}">
 <%--						<div>${sessionScope.customer_id}님 반갑습니다</div>--%>
-						<a href="logout">로그아웃</a>
+						<a href="logout" class="list-txt">로그아웃</a>
 					</c:when>
 				</c:choose>
             	<a class="list-txt" href="join">회원가입</a>
