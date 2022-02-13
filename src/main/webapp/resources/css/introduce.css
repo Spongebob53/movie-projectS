@@ -1,0 +1,55 @@
+.panel {
+    position: relative;
+}
+
+.panel-text{
+    color: #5A4AE3;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 26px;
+    padding: 10% 5%;
+    line-height: 3;
+}
+
+.panel-text strong{
+    font-size: 32px;
+}
+
+.panel:nth-of-type(even) {
+    background-color: rgba(90, 74, 227, 0.08);
+}
+
+.panel:nth-of-type(even) .panel-text {
+    float: right;
+}
+
+.svg-path {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+.svg-path svg {
+    width: 100%;
+    height: 100%;
+}
+.svg-path svg path {
+    stroke: #5A4AE3;
+    fill: none;
+    stroke-width: 2px;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+h1 {
+    position: fixed;
+    top: 10%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #5A4AE3;
+    margin: 0;
+    font-size: 44px;
+}
