@@ -1,42 +1,75 @@
+
+/****** 배너 *********/
 .banner {
-	text-align: center;
 	background-color: black;
 	font-family: 'Noto Sans KR', sans-serif;
 	padding: 0 300px;
+	height: 500px;
+	text-align: center;
 }
 
 .banner_inner {
-	height: 500px;
+	height: 100%;
 }
 
 .banner_content {
+	align-content: center;
+	justify-content: center;
 	
 }
 
-.content_title {
+.banner-title {
 	color: white;
 	font-size: 36px;
 	font-weight: 700;
+
 }
 
-.content_text {
+.banner-text {
 	color: white;
 	font-size: 20px;
 	margin-top: 30px;
 	line-height: 25px;
+
 }
 
+/****** 메인 *********/
 .main {
 	padding: 0 300px;
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
-.content_box {
-	width: 430px;
+.add-more_btn {
+	width: 60px;
+	height: 30px;
+	border-radius: 30px;
+	border: 1px solid #dddddd;
+	background: none;
+	float: right;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.title {
+	display: inline-block;
 }
 
 .main_movie-chart {
 	margin-top: 100px;
+}
+
+.movie-chart_content {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.movie-card {
+	width: 200px;
+	height: 280px;
+	background-color: lightgray;
+/* 	margin-right: 30px; */
+	border-radius: 15px;
 }
 
 .main_event {
