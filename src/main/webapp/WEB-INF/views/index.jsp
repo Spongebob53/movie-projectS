@@ -13,10 +13,10 @@
     <title>Title</title>
     <link href="/resources/css/reset.css?ver=1" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/logo.css?ver=1" rel="stylesheet" type="text/css">
+    <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/header.css?ver=1" rel="stylesheet" type="text/css">
     <link href="/resources/css/footer.css?ver=1" rel="stylesheet" type="text/css">
-    <link href="/resources/css/main.css?ver=2" rel="stylesheet" type="text/css">
+    <link href="/resources/css/main.css?ver=3" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,26 +98,46 @@
 <!--     			<video src="resource/img/main-video.mp4"> -->
 <!--     				<source src="resource/img/main-video.mp4"> -->
 <!--     			</video> -->
-<!--     		</div> -->
+<!--     		</div> -->	
 			<div class="banner_content">
-	    		<h1 class="content_title">인민을 위해 복무하라</h1>
-	    		<p class="content_text">
+	    		<h1 class="banner-title">인민을 위해 복무하라</h1>
+	    		<p class="banner-text">
 	    			노벨문학상 후보 작가 원작 <br/>
 	    			전 세계가 주목한 화제의 금서
-	    		</p>
-    		</div>
+	    		</p> 
+    		</div>		  		
     	</div>
     </section>
     
     <main class="main">
     	<div class="main_movie-chart">
-    		<h1 class="title-txt">영화 순위</h1>
+    		<div class="movie-chart_titile">
+	    		<h1 class="title title-txt">영화 순위</h1>
+	    		<button class="add-more_btn">더 보기</button>
+    		</div>
+    		<div class="movie-chart_content">	
+    			<div class="movie-card">
+    			
+    			</div>
+    			<div class="movie-card">
+    				
+    			</div>
+    			<div class="movie-card">
+    				
+    			</div>
+    			<div class="movie-card">
+    				
+    			</div>
+    			<div class="movie-card">
+    				
+    			</div>
+    		</div>
     	</div>
     	<div class="main_event">
     		<h1 class="title-txt">이벤트</h1>
     	</div>
     	<div class="main_news">
-    		<h1 class="news_title title-txt">소식</h1>
+    		<h1 class="title-txt">소식</h1>
     		<div class="news_content">
 	    		<div class="content_notice">
     				<p class="notice_title main-txt">공지사항</p>
