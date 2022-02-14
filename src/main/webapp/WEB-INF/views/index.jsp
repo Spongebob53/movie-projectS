@@ -10,13 +10,14 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>JAVA CINEMA</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo-color.ico" />
     <link href="/resources/css/reset.css?ver=1" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/header.css?ver=1" rel="stylesheet" type="text/css">
-    <link href="/resources/css/footer.css?ver=1" rel="stylesheet" type="text/css">
-    <link href="/resources/css/main.css?ver=3" rel="stylesheet" type="text/css">
+    <link href="/resources/css/header.css?ver=2" rel="stylesheet" type="text/css">
+    <link href="/resources/css/footer.css?ver=2" rel="stylesheet" type="text/css">
+    <link href="/resources/css/main.css?ver=2" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,16 +93,16 @@
         </div>
     </nav>
     
-    <section class="banner">
-    	<div class="banner_inner">
+    <section class="main-banner">
+    	<div class="main-banner_inner">
 <!--     		<div class="banner_video"> -->
 <!--     			<video src="resource/img/main-video.mp4"> -->
 <!--     				<source src="resource/img/main-video.mp4"> -->
 <!--     			</video> -->
 <!--     		</div> -->	
-			<div class="banner_content">
-	    		<h1 class="banner-title">인민을 위해 복무하라</h1>
-	    		<p class="banner-text">
+			<div class="main-banner_content">
+	    		<h1 class="main-banner-title">인민을 위해 복무하라</h1>
+	    		<p class="main-banner-text">
 	    			노벨문학상 후보 작가 원작 <br/>
 	    			전 세계가 주목한 화제의 금서
 	    		</p> 
@@ -115,74 +116,135 @@
 	    		<h1 class="title title-txt">영화 순위</h1>
 	    		<button class="add-more_btn">더 보기</button>
     		</div>
-    		<div class="movie-chart_content">	
-    			<div class="movie-card">
-    			
+    		<!-- 있다면 하나씩 반복 -->
+			<%-- <c:if test="${movieList!=null}">
+				<c:forEach items="${movieList}" var="movie">
+					<hr>
+					<form method="get">
+						<!-- 영화 id를 파라미터로 -->
+						<input type="hidden" name="movie_id" value="${movie.movie_id}">
+						<!-- 임시 확인용, 추후 영화 커버를 영화 id로 저장하고 불러오면 편할 듯 -->
+						제목 : ${movie.movie_title} <br>
+						<!-- 상세 정보에 전달하거나 -->
+						<button type="submit" formaction="movieDetail">상세정보</button>
+						<!-- 예매 페이지에 전달하거나 -->
+						<button type="submit" formaction="ticketing">예매하기</button>
+					</form>
+					<hr>
+				</c:forEach>
+			</c:if> --%>
+			<div class="movie-chart_content">	
+    			<div class="movie-list-box">
+	    			<div class="movie-card">
+	    				<img src="/resources/img/movie1.jpeg">
+	    				<div class="shadow-box"></div>
+	    				<div class="movie-chart_btn">
+	    					<button class="btn_movie-detail">상세정보</button>
+	    					<button class="btn_movie-ticketing">예매하기</button>
+	    				</div>
+	    			</div>
+	    			<div class="movie-info">
+	    				<strong class="movie-info_title movie-name">극장판 주술회전 0</strong>
+	    				<span class="movie-info_grade list-txt">평점 5</span>
+	    				<span class="movie-info_rate list-txt">예매율 50%</span>
+	    			</div>
     			</div>
-    			<div class="movie-card">
-    				
+    			<div class="movie-list-box">
+	    			<div class="movie-card">
+	    				<img src="/resources/img/movie2.jpeg">
+	    				<div class="shadow-box"></div>
+	    				<div class="movie-chart_btn">
+	    					<button class="btn_movie-detail">상세정보</button>
+	    					<button class="btn_movie-ticketing">예매하기</button>
+	    				</div>
+	    			</div>
+	    			<div class="movie-info">
+	    				<strong class="movie-info_title movie-name">언차티드</strong>
+	    				<span class="movie-info_grade list-txt">평점 5</span>
+	    				<span class="movie-info_rate list-txt">예매율 50%</span>
+	    			</div>
     			</div>
-    			<div class="movie-card">
-    				
+    			<div class="movie-list-box">
+	    			<div class="movie-card">
+	    				<img src="/resources/img/movie3.jpeg">
+	    				<div class="shadow-box"></div>
+	    				<div class="movie-chart_btn">
+	    					<button class="btn_movie-detail">상세정보</button>
+	    					<button class="btn_movie-ticketing">예매하기</button>
+	    				</div>
+	    			</div>
+	    			<div class="movie-info">
+	    				<strong class="movie-info_title movie-name">듄</strong>
+	    				<span class="movie-info_grade list-txt">평점 5</span>
+	    				<span class="movie-info_rate list-txt">예매율 50%</span>
+	    			</div>
     			</div>
-    			<div class="movie-card">
-    				
+    			<div class="movie-list-box">
+	    			<div class="movie-card">
+	    				<img src="/resources/img/movie4.jpeg">
+	    				<div class="shadow-box"></div>
+	    				<div class="movie-chart_btn">
+	    					<button class="btn_movie-detail">상세정보</button>
+	    					<button class="btn_movie-ticketing">예매하기</button>
+	    				</div>
+	    			</div>
+	    			<div class="movie-info">
+	    				<strong class="movie-info_title movie-name">나일강의 죽음</strong>
+	    				<span class="movie-info_grade list-txt">평점 5</span>
+	    				<span class="movie-info_rate list-txt">예매율 50%</span>
+	    			</div>
     			</div>
-    			<div class="movie-card">
-    				
-    			</div>
-    		</div>
-    	</div>
-    	<div class="main_event">
-    		<h1 class="title-txt">이벤트</h1>
-    	</div>
-    	<div class="main_news">
-    		<h1 class="title-txt">소식</h1>
-    		<div class="news_content">
-	    		<div class="content_notice">
-    				<p class="notice_title main-txt">공지사항</p>
-    				<p class="notice_content content-txt">[기타] 22년 VIP 선정 기준 변경 및 추가 기준 관련 안내</p>
-	    		</div>
-    			<div class="content_service-center">
-   					<p class="service-center_title main-txt">고객센터</p>
-    				<p class="service-center_content content-txt">1234-1234</p>
-    				<p class="service-center_content content-txt">운영시간(평일 00:00 ~ 00:00)</p>
+    			<div class="movie-list-box">
+	    			<div class="movie-card">
+	    				<img src="/resources/img/movie5.jpeg">
+	    				<div class="shadow-box"></div>
+	    				<div class="movie-chart_btn">
+	    					<button class="btn_movie-detail">상세정보</button>
+	    					<button class="btn_movie-ticketing">예매하기</button>
+	    				</div>
+	    			</div>
+	    			<div class="movie-info">
+	    				<strong class="movie-info_title movie-name">해리포터와 불사조기사단</strong>
+	    				<span class="movie-info_grade list-txt">평점 5</span>
+	    				<span class="movie-info_rate list-txt">예매율 50%</span>
+	    			</div>
     			</div>
     		</div>
     	</div>
     </main>
     
+   	<div class="event-banner">
+<!-- 				<img src="/resources/img/banner.png"> -->
+   		<div class="event-banner_inner">
+   			<div class="inner_content">
+   				<strong class="event-banner-title title-txt">2022 자바멤버십 안내</strong>
+   				<p class="event-banner-text">쉽고 빠른 LEVEL-UP! <br> 스페셜관, 선택형 쿠폰까지 혜택 UPGRADE!</p>
+   				<p class="event-banner-date list-txt">2022.02.14 ~ 2022. 02.20</p>
+   				<button class="event_btn content-txt">이벤트 바로가기</button>
+   			</div>
+   		</div>
+   	</div>
+   	
+   	<div class="main_news">
+   		<div class="news_inner">
+	   		<div class="news_titile">
+	    		<h1 class="title title-txt">소식</h1>
+	    		<button class="add-more_btn">더 보기</button>
+	   		</div>   		
+	   		<div class="news_content">
+	    		<div class="content_notice">
+	   				<p class="notice_title main-txt">공지사항</p>
+	   				<p class="notice_content content-txt">[기타] 22년 VIP 선정 기준 변경 및 추가 기준 관련 안내</p>
+	    		</div>
+	   			<div class="content_service-center">
+	  					<p class="service-center_title main-txt">고객센터</p>
+	   				<p class="service-center_content content-txt">1234-1234</p>
+	   				<p class="service-center_content content-txt">운영시간(평일 00:00 ~ 00:00)</p>
+	   			</div>
+	   		</div>
+   		</div>
+   	</div>
     
-
-<%-- <a href="ticketing">예매</a>
-<c:choose>
-    <c:when test="${sessionScope.customer_id == null}">
-        <a href="login">로그인</a>
-    </c:when>
-    <c:when test="${sessionScope.customer_id != null}">
-        <div>${sessionScope.customer_id}님 반갑습니다</div>
-        <a href="logout">로그아웃</a>
-    </c:when>
-</c:choose>
-
-<!-- 있다면 하나씩 반복 -->
-<c:if test="${movieList!=null}">
-    <c:forEach items="${movieList}" var="movie">
-        <hr>
-        <form method="get">
-            <!-- 영화 id를 파라미터로 -->
-            <input type="hidden" name="movie_id" value="${movie.movie_id}">
-            <!-- 임시 확인용, 추후 영화 커버를 영화 id로 저장하고 불러오면 편할 듯 -->
-            제목 : ${movie.movie_title} <br>
-            <!-- 상세 정보에 전달하거나 -->
-            <button type="submit" formaction="movieDetail">상세정보</button>
-            <!-- 예매 페이지에 전달하거나 -->
-            <button type="submit" formaction="ticketing">예매하기</button>
-        </form>
-        <hr>
-    </c:forEach>
-</c:if> --%>
-
 	<footer>
     	<div class="footer">
     		<div class="footer-logo">
