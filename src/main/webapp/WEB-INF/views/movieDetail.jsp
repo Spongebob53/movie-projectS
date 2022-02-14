@@ -31,7 +31,7 @@
 				<a href="#" class="list-txt"><i class="bi bi-search"></i></a>
 			</div>
             <div class="header-inner header-logo">
-				<a href="introduce"><img src="/resources/img/textLogo-color.png" class="logo-medium"></a>
+				<a href="index"><img src="/resources/img/textLogo-color.png" class="logo-medium"></a>
 			</div>
             <div class="header-inner header-member">
 				<c:choose>
