@@ -1,5 +1,5 @@
 /****** 배너 *********/
-.main-banner {
+section {
 	background-color: black;
 	font-family: 'Noto Sans KR', sans-serif;
 	/* 	padding: 0 300px; */
@@ -10,7 +10,7 @@
 	justify-content: center;
 }
 
-.main-banner_inner {
+.main-banner {
 	width: 1200px;
 }
 
@@ -33,8 +33,7 @@
 }
 
 /****** 메인 *********/
-.main {
-	/* 	padding: 0 300px; */
+main {
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -70,7 +69,7 @@
 
 .movie-card {
 	width: 220px;
-	height: 310px;
+	height: 320px;
 	background-color: lightgray;
 	border-radius: 15px;
 	align-items: center;
