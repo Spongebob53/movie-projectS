@@ -93,8 +93,8 @@
         </div>
     </nav>
     
-    <section class="main-banner">
-    	<div class="main-banner_inner">
+    <section>
+    	<div class="main-banner">
 <!--     		<div class="banner_video"> -->
 <!--     			<video src="resource/img/main-video.mp4"> -->
 <!--     				<source src="resource/img/main-video.mp4"> -->
@@ -110,14 +110,14 @@
     	</div>
     </section>
     
-    <main class="main">
+    <main>
     	<div class="main_movie-chart">
     		<div class="movie-chart_titile">
 	    		<h1 class="title title-txt">영화 순위</h1>
 	    		<button class="add-more_btn">더 보기</button>
     		</div>
     		<!-- 있다면 하나씩 반복 -->
-			<%-- <c:if test="${movieList!=null}">
+			<c:if test="${movieList!=null}">
 				<c:forEach items="${movieList}" var="movie">
 					<hr>
 					<form method="get">
@@ -132,7 +132,7 @@
 					</form>
 					<hr>
 				</c:forEach>
-			</c:if> --%>
+			</c:if>
 			<div class="movie-chart_content">	
     			<div class="movie-list-box">
 	    			<div class="movie-card">
@@ -251,7 +251,7 @@
 				<a href="/"><img src="/resources/img/textLogo-gray.png" class="logo-medium"></a>
 			</div>
     		<div class="footer-info">
-				<section class="footer-info_list">
+				<div class="footer-info_list">
 					<ul>
 						<li><a href="#">기업정보</a></li>
 						<li><a href="#">채용정보</a></li>
@@ -261,8 +261,8 @@
 						<li><a href="#">개인정보처리방침</a></li>
 						<li><a href="#">윤리경영</a></li>
 					</ul>
-				</section>
-				<section class="footer-info_content">
+				</div>
+				<div class="footer-info_content">
 					<address class="footer-txt">(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</address>
 					<ul>
 						<li class="footer-txt">대표이사 : 신승용</li>
@@ -270,7 +270,7 @@
 						<li class="footer-txt">통신판매업신고번호 : 2022-휴먼교육센터-0203</li>
 					</ul>
 					<p class="footer-inner_copyright footer-txt">© CJ CGV. All Rights Reserved</p>
-				</section>
+				</div>
 			</div>
     	</div>
     </footer>

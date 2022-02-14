@@ -1,10 +1,9 @@
 /****** header, nav css ******/
 header {
 /* 	padding: 0 300px; */
-	border-bottom: 0.5px solid rgb(90, 74, 227);
+	border-bottom: 0.5px solid #808080;
 	font-family: 'Noto Sans KR', sans-serif;
-	text-align: center;
-	
+	text-align: center;	
 }
 
 nav {
