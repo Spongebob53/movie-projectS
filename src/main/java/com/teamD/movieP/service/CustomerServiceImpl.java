@@ -43,4 +43,14 @@ public class CustomerServiceImpl implements CustomerService {
         }
         return false;
     }
+
+    @Override
+    public boolean checkId(CustomerVO customerVO) {
+        if(customerDAO.findCustomer(customerVO) == null){
+            return true;
+        }
+        return false;
+    }
+
+
 }

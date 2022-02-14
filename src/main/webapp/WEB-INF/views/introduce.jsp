@@ -4,6 +4,8 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="/resources/css/introduce.css?ver=1">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js'></script>
 </head>
 <body>
 <section class="panel active">
@@ -61,8 +63,6 @@
     </pre>
 </section>
 <h1>Java Cinema</h1>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js'></script>
 <script src="/resources/js/introduce.js"></script>
 </body>
 </html>
