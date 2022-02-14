@@ -1,13 +1,14 @@
 /****** header, nav css ******/
 header {
-	padding: 0 300px;
+/* 	padding: 0 300px; */
 	border-bottom: 0.5px solid rgb(90, 74, 227);
 	font-family: 'Noto Sans KR', sans-serif;
 	text-align: center;
+	
 }
 
 nav {
-	padding: 0 300px;
+/* 	padding: 0 300px; */
 	border-bottom: 1px solid rgb(90, 74, 227);
 	font-family: 'Noto Sans KR', sans-serif;
 	text-align: center;
@@ -16,6 +17,8 @@ nav {
 .header {
 	padding: 20px 0 20px;
 	overflow: auto;
+	width: 1200px;
+	margin: 0 auto;
 }
 
 .header-inner {
@@ -46,6 +49,11 @@ nav {
 	color: rgb(90, 74, 227);
 }
 
+.dropmenu {
+	margin: 0 auto;
+	width: 1200px;
+}
+
 .dropmenu ul {
 	height: 45px;
 	list-style: none;
@@ -60,7 +68,7 @@ nav {
 }
 
 .dropmenu li a {
-	color: rgb(90, 74, 227);
+	color: black;
 	display: block;
 	line-height: 45px;
 	margin: 0px;
@@ -72,6 +80,7 @@ nav {
 .dropmenu li a:hover, .dropmenu ul li:hover a {
 	text-decoration: none;
 	font-weight: bold;
+	color: rgb(90, 74, 227);
 }
 
 .dropmenu li ul {

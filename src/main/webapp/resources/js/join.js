@@ -5,55 +5,66 @@ function checkAll(checkAll) {
     });
 };
 
-function checkIdPw(checkId, checkPw){
-    if(checkId && checkPw){
-        $(".btn_join").text("가입하기");
-        $(".btn_join").attr("disabled",false);
-    }else if(!checkId){
-        $(".btn_join").text("아이디를 확인해주세요");
-    }else if(!checkPw){
-        $(".btn_join").text("비밀번호를 확인해주세요");
+function confirm(checkId, checkPw, checkEmail){
+    const btn = $(".btn_join");
+    let text;
+    if (checkId && checkPw && checkEmail) {
+        text = "가입하기";
+        btn.attr("disabled", false);
+    } else if (!checkId) {
+        text = "중복된 아이디가 존재합니다";
+    } else if (!checkPw) {
+        text = "비밀번호가 일치하지 않습니다";
+    } else if (!checkEmail) {
+        text = "올바른 이메일 형식이 아닙니다";
     }
+    btn.text(text);
 }
 
-$(function (){
+$(function () {
     let checkId = false;
     let checkPw = false;
+    let checkEmail = false;
 
-    $("input[name=customer_id]").keyup(function (){
-        let customer_id = $(this).val();
+    $("input[name=customer_id]").blur(function () {
+        const customer_id = $(this).val();
         $.ajax({
-           url : "checkId",
-            type : "post",
-            data : {customer_id : customer_id},
-            dataType : "text",
-            success : function (data){
-                if(data=="1"){
-                    $(".checkId").text("사용 가능");
+            url: "checkId",
+            type: "post",
+            data: {customer_id: customer_id},
+            dataType: "text",
+            success: function (data) {
+                if (data == "1" && (customer_id.trim() == customer_id)) {
                     checkId = true;
-                }else{
-                    $(".checkId").text("사용 불가능");
+                } else {
                     checkId = false;
                 }
-                checkIdPw(checkId, checkPw);
+                confirm(checkId, checkPw, checkEmail);
             },
-            error : function (err){
-               alert("에러에러에러" + err);
+            error: function (err) {
+                alert("에러에러에러" + err);
             }
         });
     });
 
-    $("input[type=password]").keyup(function(){
-        let customer_pw = $("input[name=customer_pw]").val();
-        let customer_chpw = $("input[name=customer_chpw]").val();
-        if(customer_pw != customer_chpw){
-            $(".checkPw").text("불일치");
+    $("input[type=password]").blur(function () {
+        const customer_pw = $("input[name=customer_pw]").val();
+        const customer_chpw = $("input[name=customer_chpw]").val();
+        if (customer_pw != customer_chpw) {
             checkPw = false;
-        }else{
-            $(".checkPw").text("일치");
+        } else {
             checkPw = true;
         }
-        checkIdPw(checkId, checkPw);
+        confirm(checkId, checkPw, checkEmail);
+    });
+
+    $("input[type=email]").blur(function () {
+        const customer_email = $(this).val();
+        const email = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (email.test(customer_email)) {
+            checkEmail = true;
+        }
+        confirm(checkId, checkPw, checkEmail);
     });
 });
 

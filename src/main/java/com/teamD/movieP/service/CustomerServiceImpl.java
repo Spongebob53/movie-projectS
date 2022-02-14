@@ -15,6 +15,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public boolean joinCustomer(CustomerVO customerVO, CustomerInfoVO customerInfoVO, CustomerTermVO customerTermVO) {
         if (customerDAO.findCustomer(customerVO)==null) {
+            customerInfoVO.setCustomer_tel(customerInfoVO.getCustomer_tel().replace("-",""));
             CreateSalt createSalt = new CreateSalt();
             try {
                 customerVO.setCustomer_pw(createSalt.getSalt_pw(customerVO.getCustomer_id(), createSalt.getSalt()));

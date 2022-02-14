@@ -15,6 +15,9 @@ import com.teamD.movieP.domain.customer.*;
 import com.teamD.movieP.service.CustomerService;
 import com.teamD.movieP.service.MovieService;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
 @Controller
 public class MainController {
 
@@ -67,6 +70,12 @@ public class MainController {
             session.setAttribute("customer_id",customer_id);
             return "redirect:/";
         }
+        response.setContentType("text/html; charset=UTF-8");
+        try {
+            PrintWriter out = response.getWriter();
+            out.println("<script>alert('ID 혹은 비밀번호가 틀렸습니다.');</script>");
+            out.flush();
+        } catch (IOException e) {}
         return "login";
     }
 

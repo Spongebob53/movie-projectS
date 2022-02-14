@@ -29,14 +29,12 @@
 			<form action="joinCustomer" method="post">
 				<section class="join_member-info">
 					<p class="section-title main-txt">회원정보</p>
-				   	<input type="text" name="customer_id" class="input-box" placeholder="아이디" required>
-					<div class="checkId"></div>
-				    <input type="password" name="customer_pw" class="input-box" placeholder="비밀번호" required>
+				   	<input type="text" name="customer_id" class="input-box" placeholder="아이디 10자 내" maxlength="20" required>
+				    <input type="password" name="customer_pw" class="input-box" placeholder="비밀번호 8~16자리" minlength="8" maxlength="16" required>
 				    <input type="password" name="customer_chpw" class="input-box" placeholder="비밀번호 확인" required>
-					<div class="checkPw"></div>
-				    <input type="text" name="customer_email" class="input-box" placeholder="이메일" required>
-				    <input type="text" name="customer_name" class="input-box" placeholder="이름" required>
-				    <input type="text" name="customer_tel" class="input-box" placeholder="연락처" required>
+				    <input type="email" name="customer_email" class="input-box" placeholder="이메일" maxlength="50" required>
+				    <input type="text" name="customer_name" class="input-box" placeholder="이름" maxlength="7" required>
+				    <input type="text" name="customer_tel" class="input-box" placeholder="연락처" maxlength="14" required>
 			    </section>
 			    
 			    <hr>
