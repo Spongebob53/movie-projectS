@@ -1,38 +1,27 @@
-/****** header, nav css ******/
+/*****************************
+*********** 헤더 영역 **********/
 header {
-/* 	padding: 0 300px; */
-	border-bottom: 0.5px solid #808080;
-	font-family: 'Noto Sans KR', sans-serif;
-	text-align: center;	
-}
-
-nav {
-/* 	padding: 0 300px; */
-	border-bottom: 1px solid rgb(90, 74, 227);
-	font-family: 'Noto Sans KR', sans-serif;
+	border-bottom: 1px solid #ddd;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80px;
 }
 
 .header {
-	padding: 20px 0 20px;
 	overflow: auto;
 	width: 1200px;
-	margin: 0 auto;
-}
-
-.header-inner {
-	display: inline-block;
-}
-
-.header-logo {
-	float: left;
-	margin-left: 400px;
 }
 
 .header-search {
 	float: left;
 	margin-top: 15px;
-	padding: 3px;
+}
+
+.header-logo {
+	float: left;
+	margin-left: 430px;
 }
 
 .header-member {
@@ -41,151 +30,69 @@ nav {
 }
 
 .header-member a {
-	padding: 0 7px;
+	padding: 8px;
 }
 
 .header-member a:hover {
 	color: rgb(90, 74, 227);
 }
 
-.dropmenu {
-	margin: 0 auto;
+/*****************************
+*********** 네비 영역 **********/
+nav {
+	border-bottom: 1px solid rgb(90, 74, 227);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav {
 	width: 1200px;
+	height: 40px;
+	z-index: 100;
 }
 
-.dropmenu ul {
-	height: 45px;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.nav ul {
+	overflow: auto;
 }
 
-.dropmenu li {
+.nav li {
 	float: left;
-	padding: 0px;
-	width: 225px;
+	width: 240px;
 }
 
-.dropmenu li a {
-	color: black;
+.nav li a {
 	display: block;
-	line-height: 45px;
-	margin: 0px;
+	line-height: 40px;
 	padding: 0px 25px;
 	text-align: center;
-	text-decoration: none;
 }
 
-.dropmenu li a:hover, .dropmenu ul li:hover a {
-	text-decoration: none;
-	font-weight: bold;
+.nav li:hover .txt-md, .nav ul li:hover a {
+	font-weight: 700;
 	color: rgb(90, 74, 227);
 }
 
-.dropmenu li ul {
+.nav li ul {
 	background-color: white;
 	display: none;
-	height: auto;
 	border-top: 1px solid rgb(90, 74, 227);
-	position: absolute;
-	width: 225px;
-	z-index: 200;
+	width: 240px;
 }
 
-.dropmenu li:hover ul {
+.nav li:hover ul {
 	display: block;
 }
 
-.dropmenu li li {
-	background-color: white;
-	display: block;
-	float: none;
-	margin: 0px;
-	padding: 0px;
-	width: 225px;
-}
-
-.dropmenu li:hover li a {
-	background: none;
-}
-
-.dropmenu li ul a {
-	display: block;
-	height: 45px;
-	font-size: 14px;
-	margin: 0px;
-	padding: 0px 10px 0px 15px;
-	text-align: center;
-}
-
-.dropmenu li ul a:hover, .dropmenu li ul li:hover a {
-	background: rgba(90, 74, 227, 0.9);
-	border: 0px;
+.nav li ul a:hover, .nav li ul li:hover a {
+	background-color: rgb(90, 74, 227);
 	color: white;
-	text-decoration: none;
 }
 
-.dropmenu p {
-	clear: left;
-}
-
-/* .nav-list ul li {	 */
-/*     display: inline-block; */
-/*     padding: 13px 0; */
-/* } */
-
-/* .nav-list ul li:hover {	 */
-/*    background-color: red; */
-/* } */
-
-/* .nav-list ul li a {	 */
-/* /*     font-weight: 500; */
-	/*     padding: 11px 95px; */
-	/* } */
-	/* .nav-list ul li a:hover {	 */
-	/*     font-weight: 500; */
-	/*     color: white; */
-	/* } */ 
-.nav-list li ul {
-	background: red;
-	display: none;
-	height: auto;
-	border: 0px;
-	position: absolute;
-	width: 200px;
-	z-index: 200;
-	/*top:1em;
-/*left:0;*/
-}
-
-.nav-list li:hover ul {
-	display: block;
-}
-
-.nav-list li li {
-	background: red;
-	display: block;
-	float: none;
-	margin: 0px;
-	padding: 0px;
-	width: 200px;
-}
-
-.nav-list li:hover li a {
-	background: none;
-}
-
-.nav-list li ul a {
-	display: block;
-	height: 80px;
-	font-size: 14px;
-	margin: 0px;
-	padding: 0px 10px 0px 15px;
-	text-align: left;
-}
-
-i {
-	font-size: 1.2rem;
+.bi {
+	font-size: 16px;
 	padding: 5px;
-	color: #808080;
+	color: #666;
+	border-radius: 15px;
 }
