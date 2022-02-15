@@ -1,8 +1,7 @@
-/****** 배너 *********/
-.main-banner {
-	background-color: black;
-	font-family: 'Noto Sans KR', sans-serif;
-	/* 	padding: 0 300px; */
+/*****************************
+*********** 메인 배너 **********/
+section {
+	background-color: #000;
 	height: 500px;
 	text-align: center;
 	display: flex;
@@ -10,31 +9,80 @@
 	justify-content: center;
 }
 
-.main-banner_inner {
+.main-banner {
 	width: 1200px;
 }
 
+.video-wrap {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.video-wrap:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.25)
+		25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 75%, #000 100%);
+	z-index: 1;
+}
+
+.video-wrap video {
+	transform: scale(1.15);
+}
+
 .main-banner_content {
-	align-content: center;
-	justify-content: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
 }
 
-.main-banner-title {
-	color: white;
-	font-size: 36px;
-	font-weight: 700;
+.main-banner_title {
+	color: #fff;
 }
 
-.main-banner-text {
+.main-banner_text {
 	color: white;
-	font-size: 20px;
 	margin-top: 30px;
 	line-height: 25px;
 }
 
-/****** 메인 *********/
-.main {
-	/* 	padding: 0 300px; */
+/*********** 메인 배너 버튼 **********/
+.main-banner_btn {
+	margin-top: 30px;
+}
+
+.main-banner_btn .btn_movie-detail {
+	width: 100px;
+	height: 40px;
+	margin-right: 15px;
+	border-radius: 30px;
+	border: none;
+	background-color: white;
+	cursor: pointer;
+	border-radius: 30px;
+}
+
+.main-banner_btn .btn_movie-ticketing {
+	width: 100px;
+	height: 40px;
+	border-radius: 30px;
+	border: none;
+	background-color: rgb(90, 74, 227);
+	color: white;
+	cursor: pointer;
+}
+
+/*****************************
+*********** 메인 배너 **********/
+main {
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -46,7 +94,6 @@
 	background: none;
 	float: right;
 	cursor: pointer;
-	font-size: 12px;
 }
 
 .title {
@@ -70,7 +117,7 @@
 
 .movie-card {
 	width: 220px;
-	height: 310px;
+	height: 320px;
 	background-color: lightgray;
 	border-radius: 15px;
 	align-items: center;
@@ -128,7 +175,7 @@
 	position: absolute;
 }
 
-.btn_movie-detail {
+.main_movie-chart .btn_movie-detail {
 	width: 100px;
 	height: 40px;
 	border-radius: 30px;
@@ -141,7 +188,7 @@
 	background-color: rgba(255, 255, 255, 0.8);
 }
 
-.btn_movie-ticketing {
+.main_movie-chart .btn_movie-ticketing {
 	width: 100px;
 	height: 40px;
 	border-radius: 30px;
@@ -156,15 +203,14 @@
 	background-color: rgba(90, 74, 227, 0.8);
 }
 
-.movie-info {
-	flex-wrap: wrap;
-}
-
 .movie-info_title {
+	width: 220px;
+	height: 22px;
 	display: block;
 	margin-top: 15px;
-	flex-basis: 100%;
-	white-space: wrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .movie-info span {
@@ -198,7 +244,7 @@
 .event-banner-text {
 	margin-top: 25px;
 	word-break: normal;
-	line-height: 20px;	
+	line-height: 20px;
 	display: block;
 }
 
