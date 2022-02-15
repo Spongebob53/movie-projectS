@@ -1,10 +1,15 @@
 package com.teamD.movieP.controller;
 
 import com.teamD.movieP.domain.movie.MovieVO;
+import com.teamD.movieP.domain.theater.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.Cookie;
@@ -14,6 +19,7 @@ import javax.servlet.http.HttpSession;
 import com.teamD.movieP.domain.customer.*;
 import com.teamD.movieP.service.CustomerService;
 import com.teamD.movieP.service.MovieService;
+import com.teamD.movieP.service.TheaterService;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,6 +31,8 @@ public class MainController {
     private MovieService movieService;
     @Autowired
     private CustomerService customerService;
+    @Autowired
+    private TheaterService theaterService;
 
     @RequestMapping("/{step}")
     public String step(@PathVariable String step) {
@@ -101,4 +109,19 @@ public class MainController {
         }
         return "0";
     }
+    
+    @RequestMapping("ticketing")
+    public void ticketing(AreaVO areaVO, Model model) {
+    	model.addAttribute("area",theaterService.ticketing_area(areaVO));
+    }
+    
+    @ResponseBody
+    @RequestMapping("ticketing_theater")
+    public void ticketing_theater(Model model,AreaVO areaVO) {
+    	System.out.println("아리아 : " + areaVO.getArea_id() );
+    	model.addAttribute("theater",theaterService.ticketing_theater(areaVO));
+	}
+    
+    
+    
 }
