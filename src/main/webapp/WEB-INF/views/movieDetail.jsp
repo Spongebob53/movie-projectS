@@ -15,7 +15,7 @@
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/header.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/footer.css?ver=1" rel="stylesheet" type="text/css">
+    <link href="/resources/css/footer.css?ver=3" rel="stylesheet" type="text/css">
     <link href="/resources/css/movieDetail.css?ver=3" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,9 +112,11 @@
 				<button class="btn_tab txt-md" onclick="">영화정보</button>
 				<button class="btn_tab txt-md">평점 및 관람평</button>
 				<div class="movie-tab">
-					<div class="movie-tab_info1">
-						<strong class="info-title tit-sm">시놉시스</strong>
-						<p class="info1-text txt-sm">
+					<div class="movie-tab_info">
+						<div class="info_titile">
+							<strong class="tit-sm">시놉시스</strong>
+						</div>
+						<p class="info_text txt-sm">
 							어릴 적 소꿉친구인 오리모토 리카를 교통사고로 눈앞에서 잃은 옷코츠 유타.<br> <br> “약속해, 리카와 유타는
 							어른이 되면 결혼하기로” 옷코츠는 원령으로 변한 리카의 저주에 괴로워한 나머지, 자신도 죽기를 바라지만 최강의
 							주술사인 고죠 사토루에 의해 주술고전에 들어가게 된다. 그리고 동급생인 젠인 마키, 이누마키 토게, 판다를 만나면서
@@ -124,11 +126,33 @@
 							저주를 내리는데…과연 옷코츠는 게토를 막을 수 있을까? 그리고 리카의 저주를 풀 수 있을까?
 						</p>
 					</div>
-					<div class="movie-tab_info2">
-					
+					<div class="movie-tab_info">
+						<div class="info_titile">
+							<strong class="tit-sm">트레일러</strong>
+							<button class="add-more_btn txt-xs">더 보기</button>
+						</div>
+						<div class="info_trailer">
+							<div class="trailer-card"></div>
+							<div class="trailer-card"></div>
+							<div class="trailer-card"></div>
+						</div>
 					</div>
-					<div class="movie-tab_info3">
-					
+					<div class="movie-tab_info">
+						<div class="info_titile">
+							<strong class="tit-sm">스틸컷</strong>
+							<button class="add-more_btn txt-xs">더 보기</button>
+						</div>
+						<div class="info_still-cut">
+							<div class="still-cut_view">
+								<div class="view-card"></div>
+							</div>
+							<div class="still-cut_thumb">
+								<div class="thumb-card"></div>
+								<div class="thumb-card"></div>
+								<div class="thumb-card"></div>
+								<div class="thumb-card"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

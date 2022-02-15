@@ -109,16 +109,69 @@ section {
 	cursor: pointer;
 }
 
-.movie-tab div {
+.movie-tab_info {
 	margin-top: 70px;
 }
 
-.info-title {
+.info_titile {
 	margin-bottom: 30px;
 	display: block;
 }
 
-.info1-text {
-	height: 150px;
+.info_text {
 	line-height: 18px;
+	text-overflow: ellipsis;
+}
+
+.info_trailer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.trailer-card {
+	width: 340px;
+	height: 220px;
+	background-color: #ddd;
+	border-radius: 15px;
+}
+
+.info_still-cut {
+	overflow: auto;
+
+}
+
+.still-cut_view {
+	float: left;
+}
+
+.still-cut_thumb {
+	float: right;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.view-card {
+	width: 800px;
+	height: 500px;
+	background-color: #ddd;
+	border-radius: 15px;
+}
+
+.thumb-card {
+	width: 180px;
+	height: 110px;
+	background-color: #ddd;
+	border-radius: 15px;
+}
+
+.add-more_btn {
+	width: 60px;
+	height: 30px;
+	border-radius: 30px;
+	border: 1px solid #dddddd;
+	background: none;
+	float: right;
+	cursor: pointer;
 }
