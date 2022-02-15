@@ -40,7 +40,7 @@
 			    <hr>
 			    
 			    <section class="join_terms">
-			    <p class="section-title main-txt">서비스 약관</p>
+			    	<p class="section-title main-txt">서비스 약관</p>
 			    	<div class="terms-box agree-all main-txt">
 					    <input type="checkbox" id="agree_all" onclick="checkAll(this)">
 					    <label for="agree_all">모두 동의합니다.</label>

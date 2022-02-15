@@ -16,6 +16,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo-color.ico" />
     <link href="/resources/css/reset.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
+    <link href="/resources/css/button.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/header.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/footer.css?ver=2" rel="stylesheet" type="text/css">
@@ -105,7 +106,7 @@
     	<div class="main_movie-chart">
     		<div class="movie-chart_titile">
 	    		<h1 class="title tit-xl">영화 순위</h1>
-	    		<button class="add-more_btn txt-xs">더 보기</button>
+	    		<button class="btn_add-more txt-xs">더 보기</button>
     		</div>
     		<!-- 있다면 하나씩 반복 -->
 			<c:if test="${movieList!=null}">
@@ -220,7 +221,7 @@
    		<div class="news_inner">
 	   		<div class="news_titile">
 	    		<h1 class="title tit-xl">소식</h1>
-	    		<button class="add-more_btn txt-xs">더 보기</button>
+	    		<button class="btn_add-more txt-xs">더 보기</button>
 	   		</div>   		
 	   		<div class="news_content">
 	    		<div class="content_notice">
