@@ -12,11 +12,12 @@
 	<title>영화이름</title>
 	<link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo-color.ico" />
     <link href="/resources/css/reset.css?ver=1" rel="stylesheet" type="text/css">
+    <link href="/resources/css/button.css?ver=1" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/header.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/footer.css?ver=3" rel="stylesheet" type="text/css">
-    <link href="/resources/css/movieDetail.css?ver=3" rel="stylesheet" type="text/css">
+    <link href="/resources/css/movieDetail.css?ver=2" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,7 +88,7 @@
     
     <main>
     	<div class="main">
-    		<div class="detail-top">
+			<div class="detail-top">
     			<div class="movie-poster">
 					<img src="/resources/img/movie1.jpeg">
 				</div>
@@ -105,7 +106,7 @@
 						<li class="txt-sm">감독 <strong class="txt-sm">박성후</strong></li>
 						<li class="txt-sm">출연 <strong class="txt-sm">오가타 메구미, 하나자와 카나, 코마츠 미카코, 우치야마 코우키, 세키 토모카즈, 나카무라 유이치, 사쿠라이 타카히로</strong></li>
 					</ul>
-					<button class="btn_movie-ticketing txt-sm">예매하기</button>
+					<button class="btn_movie-ticketing">예매하기</button>
 				</div>
 			</div>
 			<div class="detail-bottom">
@@ -126,25 +127,48 @@
 							저주를 내리는데…과연 옷코츠는 게토를 막을 수 있을까? 그리고 리카의 저주를 풀 수 있을까?
 						</p>
 					</div>
-					<div class="movie-tab_info">
+					<div class="movie-tab_info">			
 						<div class="info_titile">
 							<strong class="tit-sm">트레일러</strong>
-							<button class="add-more_btn txt-xs">더 보기</button>
+							<button class="btn_add-more txt-xs">더 보기</button>
 						</div>
 						<div class="info_trailer">
-							<div class="trailer-card"></div>
-							<div class="trailer-card"></div>
-							<div class="trailer-card"></div>
+							<button class="btn_arrow _left">
+								<i class="bi bi-chevron-left"></i>
+							</button>
+							<div class="trailer-box">
+								<div class="trailer-card"></div>
+								<span class="txt-sm">티저 예고편</span>
+							</div>
+							<div class="trailer-box">
+								<div class="trailer-card"></div>
+								<span class="txt-sm">티저 예고편</span>
+							</div>
+							<div class="trailer-box">
+								<div class="trailer-card"></div>
+								<span class="txt-sm">티저 예고편</span>
+							</div>
+							<button class="btn_arrow _right">
+								<i class="bi bi-chevron-right"></i>
+							</button>
 						</div>
 					</div>
 					<div class="movie-tab_info">
 						<div class="info_titile">
 							<strong class="tit-sm">스틸컷</strong>
-							<button class="add-more_btn txt-xs">더 보기</button>
+							<button class="btn_add-more txt-xs">더 보기</button>
 						</div>
 						<div class="info_still-cut">
 							<div class="still-cut_view">
 								<div class="view-card"></div>
+							</div>
+							<div>
+								<button class="btn_arrow _left">
+									<i class="bi bi-chevron-left"></i>
+								</button>
+								<button class="btn_arrow _left">
+									<i class="bi bi-chevron-right"></i>
+								</button>
 							</div>
 							<div class="still-cut_thumb">
 								<div class="thumb-card"></div>
