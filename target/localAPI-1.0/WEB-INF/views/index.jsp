@@ -11,13 +11,16 @@
 <html>
 <head>
     <title>JAVA CINEMA</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo-color.ico" />
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico" />
     <link href="/resources/css/reset.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
+    <link href="/resources/css/button.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/header.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/footer.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/main.css?ver=2" rel="stylesheet" type="text/css">
+    <link href="/resources/css/main.css?ver=5" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,14 +28,14 @@
 </head>
 
 <body>
-	
+
 	 <header>
         <div class="header">
             <div class="header-search">
 				<a href="#" ><i class="bi bi-search"></i></a>
 			</div>
             <div class="header-logo">
-				<a href="introduce" data-transition="fade"><img src="/resources/img/textLogo-color.png" class="logo-medium"></a>
+				<a href="introduce" data-transition="slideup"><img src="/resources/img/logo/textLogo-color.png" class="logo-medium"></a>
 			</div>
             <div class="header-member">
 				<c:choose>
@@ -49,7 +52,7 @@
             </div>
         </div>
     </header>
-    
+
     <nav>
 		<ul class="nav">
 			<li><a href="#" class="txt-md">영화</a>
@@ -80,12 +83,12 @@
 				</ul></li>
 		</ul>
 	</nav>
-    
+
     <section>
     	<div class="main-banner">
     		<div class="video-wrap">
 				<video autoplay controls loop muted poster="" preload="auto">
-					<source src="/resources/img/main-video1.mp4" type="video/mp4">			
+					<source src="/resources/img/main-video1.mp4" type="video/mp4">
 				</video>
 				<div class="main-banner_content">
 					<h1 class="main-banner_title tit-2xl">나이트메어 앨리</h1>
@@ -98,110 +101,53 @@
 			</div>
 		</div>
     </section>
-    
+
     <main>
     	<div class="main_movie-chart">
     		<div class="movie-chart_titile">
 	    		<h1 class="title tit-xl">영화 순위</h1>
-	    		<button class="add-more_btn txt-xs">더 보기</button>
+	    		<button class="btn_add-more txt-xs">더 보기</button>
     		</div>
-    		<!-- 있다면 하나씩 반복 -->
-			<c:if test="${movieList!=null}">
-				<c:forEach items="${movieList}" var="movie">
-					<hr>
-					<form method="get">
-						<!-- 영화 id를 파라미터로 -->
-						<input type="hidden" name="movie_id" value="${movie.movie_id}">
-						<!-- 임시 확인용, 추후 영화 커버를 영화 id로 저장하고 불러오면 편할 듯 -->
-						제목 : ${movie.movie_title} <br>
-						<!-- 상세 정보에 전달하거나 -->
-						<button type="submit" formaction="movieDetail">상세정보</button>
-						<!-- 예매 페이지에 전달하거나 -->
-						<button type="submit" formaction="ticketing">예매하기</button>
-					</form>
-					<hr>
-				</c:forEach>
-			</c:if>
-			<div class="movie-chart_content">	
-    			<div class="movie-list-box">
-	    			<div class="movie-card">
-	    				<img src="/resources/img/movie1.jpeg">
-	    				<div class="shadow-box"></div>
-	    				<div class="movie-chart_btn">
-	    					<button class="btn_movie-detail txt-sm">상세정보</button>
-	    					<button class="btn_movie-ticketing txt-sm">예매하기</button>
-	    				</div>
-	    			</div>
-	    			<div class="movie-info">
-	    				<strong class="movie-info_title tit-lg">극장판 주술회전 0</strong>
-	    				<span class="movie-info_grade txt-sm">평점 5</span>
-	    				<span class="movie-info_rate txt-sm">예매율 50%</span>
-	    			</div>
-    			</div>
-    			<div class="movie-list-box">
-	    			<div class="movie-card">
-	    				<img src="/resources/img/movie2.jpeg">
-	    				<div class="shadow-box"></div>
-	    				<div class="movie-chart_btn">
-	    					<button class="btn_movie-detail txt-sm">상세정보</button>
-	    					<button class="btn_movie-ticketing txt-sm">예매하기</button>
-	    				</div>
-	    			</div>
-	    			<div class="movie-info">
-	    				<strong class="movie-info_title tit-lg">언차티드</strong>
-	    				<span class="movie-info_grade txt-sm">평점 5</span>
-	    				<span class="movie-info_rate txt-sm">예매율 50%</span>
-	    			</div>
-    			</div>
-    			<div class="movie-list-box">
-	    			<div class="movie-card">
-	    				<img src="/resources/img/movie3.jpeg">
-	    				<div class="shadow-box"></div>
-	    				<div class="movie-chart_btn">
-	    					<button class="btn_movie-detail txt-sm">상세정보</button>
-	    					<button class="btn_movie-ticketing txt-sm">예매하기</button>
-	    				</div>
-	    			</div>
-	    			<div class="movie-info">
-	    				<strong class="movie-info_title tit-lg">듄</strong>
-	    				<span class="movie-info_grade txt-sm">평점 5</span>
-	    				<span class="movie-info_rate txt-sm">예매율 50%</span>
-	    			</div>
-    			</div>
-    			<div class="movie-list-box">
-	    			<div class="movie-card">
-	    				<img src="/resources/img/movie4.jpeg">
-	    				<div class="shadow-box"></div>
-	    				<div class="movie-chart_btn">
-	    					<button class="btn_movie-detail txt-sm">상세정보</button>
-	    					<button class="btn_movie-ticketing txt-sm">예매하기</button>
-	    				</div>
-	    			</div>
-	    			<div class="movie-info">
-	    				<strong class="movie-info_title tit-lg">나일강의 죽음</strong>
-	    				<span class="movie-info_grade txt-sm">평점 5</span>
-	    				<span class="movie-info_rate txt-sm">예매율 50%</span>
-	    			</div>
-    			</div>
-    			<div class="movie-list-box">
-	    			<div class="movie-card">
-	    				<img src="/resources/img/movie5.jpeg">
-	    				<div class="shadow-box"></div>
-	    				<div class="movie-chart_btn">
-	    					<button class="btn_movie-detail txt-sm">상세정보</button>
-	    					<button class="btn_movie-ticketing txt-sm">예매하기</button>
-	    				</div>
-	    			</div>
-	    			<div class="movie-info">
-	    				<strong class="movie-info_title tit-lg">해리포터와 불사조기사단ㅇㅇ</strong>
-	    				<span class="movie-info_grade txt-sm">평점 5</span>
-	    				<span class="movie-info_rate txt-sm">예매율 50%</span>
-	    			</div>
-    			</div>
+			<div class="movie-chart_content">
+				<c:if test="${movieList!=null}">
+					<c:forEach items="${movieList}" var="movie">
+						<div class="movie-list-box">
+							<form method="get" class="movie-card">
+								<input type="hidden" name="movie_id" value="${movie.movie_id}">
+								<img src="/resources/img/moviePoster/${movie.movie_title}.jpeg">
+								<div class="shadow-box"></div>
+								<div class="movie-chart_btn">
+									<button type="submit" formaction="movieDetail" class="btn_movie-detail txt-sm">상세정보</button>
+									<button type="submit" formaction="ticketing" class="btn_movie-ticketing txt-sm">예매하기</button>
+								</div>
+								</form>
+							<div class="movie-info">
+								<strong class="movie-info_title tit-lg">${movie.movie_title}</strong>
+								<span class="movie-info_grade txt-sm">평점 5</span>
+								<span class="movie-info_rate txt-sm">예매율 50%</span>
+							</div>
+						</div>
+					</c:forEach>
+				</c:if>
+<%--    			<div class="movie-list-box">--%>
+<%--	    			<div class="movie-card">--%>
+<%--	    				<img src="/resources/img/moviePoster/자두야.jpeg">--%>
+<%--	    				<div class="shadow-box"></div>--%>
+<%--	    				<div class="movie-chart_btn">--%>
+<%--	    					<button class="btn_movie-detail txt-sm">상세정보</button>--%>
+<%--	    					<button class="btn_movie-ticketing txt-sm">예매하기</button>--%>
+<%--	    				</div>--%>
+<%--	    			</div>--%>
+<%--	    			<div class="movie-info">--%>
+<%--	    				<strong class="movie-info_title tit-lg">해리포터와 불사조기사단</strong>--%>
+<%--	    				<span class="movie-info_grade txt-sm">평점 5</span>--%>
+<%--	    				<span class="movie-info_rate txt-sm">예매율 50%</span>--%>
+<%--	    			</div>--%>
+<%--    			</div>--%>
     		</div>
     	</div>
     </main>
-    
+
    	<div class="event-banner">
 <!-- 				<img src="/resources/img/banner.png"> -->
    		<div class="event-banner_inner">
@@ -213,13 +159,13 @@
    			</div>
    		</div>
    	</div>
-   	
+
    	<div class="main_news">
    		<div class="news_inner">
 	   		<div class="news_titile">
 	    		<h1 class="title tit-xl">소식</h1>
-	    		<button class="add-more_btn txt-xs">더 보기</button>
-	   		</div>   		
+	    		<button class="btn_add-more txt-xs">더 보기</button>
+	   		</div>
 	   		<div class="news_content">
 	    		<div class="content_notice">
 	   				<p class="notice_title tit-sm">공지사항</p>
@@ -233,11 +179,11 @@
 	   		</div>
    		</div>
    	</div>
-    
+
 	<footer>
     	<div class="footer">
     		<div class="footer-logo">
-				<a href="/"><img src="/resources/img/textLogo-gray.png" class="logo-medium"></a>
+				<a href="/"><img src="/resources/img/logo/textLogo-gray.png" class="logo-medium"></a>
 			</div>
     		<div class="footer-info">
 				<div class="footer-info_list">

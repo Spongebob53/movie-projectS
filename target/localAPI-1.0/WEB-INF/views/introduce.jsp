@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Title</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico" />
+    <title>Introduce</title>
     <link rel="stylesheet" href="/resources/css/reset.css">
-    <link rel="stylesheet" href="/resources/css/introduce.css?ver=21">
+    <link rel="stylesheet" href="/resources/css/introduce.css?ver=1">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
@@ -69,7 +70,7 @@
             <path d="M 661.15365,2.2594865 C 919.62572,-0.95137394 894.31559,147.147 654.85183,158.76704 c -151.36512,7.81872 -362.50836,1.05945 -404.24514,219.44829 -24.20821,112.27795 2.66199,299.19602 130.42219,280.79083 16.2,1.4 44.5,-28.9 4,-35.9 -43.2,-7.4 -75.6,41.9 -47.5,98.7 23.6,47.9 110.2,89.2 164.5,65.2 12,-5.3 21.3,-10.6 26.8,-20.3 10.8,-18.6 -20.5,-26.2 -36.5,-3.5 -12.8,18.2 8.8,50.3 44.1,52.4 0,0 193.7,9 157,-93.2 -20.1,-41.3 -86.9,-149 -93.9,-139.8 -7,9.2 13.7,46.5 29.6,42.3 15.8,-4.2 84.4,-20.9 89.2,-36.4 4.8,-15.5 -22.1,-66 -24.9,-54.4 -2.8,11.6 11,56.6 17.9,49.5 6.9,-7.1 -9,-68 -36.7,-103.9 -25.6,-33.5 -82.9,-67.5 -93,-56.1 -15.5,17.4 -24.4,150.4 7.8,147.1 32.1,-3.3 104.2,-36.5 100,-43.2 -4.3,-6.7 -116.7,22.9 -100.4,57.8 16.3,34.8 40.6,79.8 45.9,77 5.3,-2.7 -22.7,-51.5 -29.6,-42.3 -7,9.2 -24.2,48.2 -16.3,74.2 7.9,26 25.6,55.6 33.7,46.5 8.1,-9 20.3,-69.1 66.8,-81.7 46.5,-12.6 101.6,25 112.5,18.2 10.9,-6.8 -25.3,-87.2 -80.5,-84.5 0,0 -5.2,-2.1 -4.4,8.4 0.4,6.3 -2.6,36.9 -3.7,59.2 -0.7,14.1 -0.8,24.8 1.3,23.9 5.2,-2.2 -0.9,-20.6 -3.8,-21.8 -2.8,-1.2 -15.5,8.9 -26.4,13.2 -11,4.3 -27,-1.9 -22.9,5.9 4.2,8 15.8,22.5 35.5,16.6 19.7,-5.9 12.6,-13.8 10,-13"/>
         </svg>
     </div>
-    <a href="/" class="panel-text last-logo" data-transition="fade">Java Cinema</a>
+    <a href="/" class="panel-text last-logo">Java Cinema</a>
 </section>
 <script src="/resources/js/introduce.js"></script>
 </body>

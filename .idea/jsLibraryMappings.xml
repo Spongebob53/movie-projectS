@@ -2,6 +2,6 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{jquery, jquery-mobile, scrollify}" />
-    <file url="PROJECT" libraries="{jquery, scrollify}" />
+    <file url="PROJECT" libraries="{jquery, jquery-mobile, scrollify}" />
   </component>
 </project>

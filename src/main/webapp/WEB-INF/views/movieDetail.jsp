@@ -10,7 +10,7 @@
 <html>
 <head>
 	<title>영화이름</title>
-	<link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo-color.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico" />
     <link href="/resources/css/reset.css?ver=1" rel="stylesheet" type="text/css">
     <link href="/resources/css/button.css?ver=1" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
@@ -31,7 +31,7 @@
 				<a href="#" ><i class="bi bi-search"></i></a>
 			</div>
             <div class="header-logo">
-				<a href="/"><img src="/resources/img/textLogo-color.png" class="logo-medium"></a>
+				<a href="/"><img src="/resources/img/logo/textLogo-color.png" class="logo-medium"></a>
 			</div>
             <div class="header-member">
 				<c:choose>
@@ -90,7 +90,7 @@
     	<div class="main">
 			<div class="detail-top">
     			<div class="movie-poster">
-					<img src="/resources/img/movie1.jpeg">
+					<img src="/resources/img/moviePoster/해적.jpeg">
 				</div>
 				<div class="movie-info">
 					<div class="movie-info_title">
@@ -201,7 +201,7 @@
     <footer>
     	<div class="footer">
     		<div class="footer-logo">
-				<a href="/"><img src="/resources/img/textLogo-gray.png" class="logo-medium"></a>
+				<a href="/"><img src="/resources/img/logo/textLogo-gray.png" class="logo-medium"></a>
 			</div>
     		<div class="footer-info">
 				<div class="footer-info_list">

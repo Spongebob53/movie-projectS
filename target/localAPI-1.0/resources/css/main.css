@@ -59,41 +59,11 @@ section {
 	margin-top: 30px;
 }
 
-.main-banner_btn .btn_movie-detail {
-	width: 100px;
-	height: 40px;
-	margin-right: 15px;
-	border-radius: 30px;
-	border: none;
-	background-color: white;
-	cursor: pointer;
-	border-radius: 30px;
-}
-
-.main-banner_btn .btn_movie-ticketing {
-	width: 100px;
-	height: 40px;
-	border-radius: 30px;
-	border: none;
-	background-color: rgb(90, 74, 227);
-	color: white;
-	cursor: pointer;
-}
 
 /*****************************
 *********** 메인 배너 **********/
 main {
 /* 	font-family: 'Noto Sans KR', sans-serif; */
-}
-
-.add-more_btn {
-	width: 60px;
-	height: 30px;
-	border-radius: 30px;
-	border: 1px solid #dddddd;
-	background: none;
-	float: right;
-	cursor: pointer;
 }
 
 .title {
@@ -109,6 +79,7 @@ main {
 	margin-top: 30px;
 	display: flex;
 	justify-content: space-between;
+	overflow: auto;
 }
 
 .movie-list-box {
@@ -123,10 +94,11 @@ main {
 	align-items: center;
 	justify-content: center;
 	display: flex;
+	margin-right: 30px;
 }
 
-.slide-card {
-	
+.movie-chart_btn button~button {
+	margin-top: 15px;
 }
 
 /* .movie-card:after { */
@@ -173,34 +145,6 @@ main {
 	align-items: center;
 	justify-content: center;
 	position: absolute;
-}
-
-.main_movie-chart .btn_movie-detail {
-	width: 100px;
-	height: 40px;
-	border-radius: 30px;
-	border: none;
-	background-color: white;
-	cursor: pointer;
-}
-
-.btn_movie-detail:hover {
-	background-color: rgba(255, 255, 255, 0.8);
-}
-
-.main_movie-chart .btn_movie-ticketing {
-	width: 100px;
-	height: 40px;
-	border-radius: 30px;
-	border: none;
-	background-color: rgb(90, 74, 227);
-	color: white;
-	margin-top: 15px;
-	cursor: pointer;
-}
-
-.btn_movie-ticketing:hover {
-	background-color: rgba(90, 74, 227, 0.8);
 }
 
 .movie-info_title {

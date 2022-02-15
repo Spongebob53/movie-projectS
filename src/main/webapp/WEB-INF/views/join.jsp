@@ -22,7 +22,7 @@
 	<div class="join">
 	
 		<div class="join-logo">
-			<a href="/"><img src="/resources/img/textLogo-color.png" class="logo-large"></a>
+			<a href="/"><img src="/resources/img/logo/textLogo-color.png" class="logo-large"></a>
 		</div>
 		
 		<div class="join-form">

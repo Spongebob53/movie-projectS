@@ -33,7 +33,7 @@
 	<div class="login">
 	
 		<div class="login-logo">
-			<a href="/"><img src="/resources/img/textLogo-color.png" class="logo-large"></a>
+			<a href="/"><img src="/resources/img/logo/textLogo-color.png" class="logo-large"></a>
 		</div>
 
 		<div class="login-form">
