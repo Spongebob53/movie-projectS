@@ -12,6 +12,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Autowired
     private CustomerDAO customerDAO;
 
+//    회원 가입 하기
     @Override
     public boolean joinCustomer(CustomerVO customerVO, CustomerInfoVO customerInfoVO, CustomerTermVO customerTermVO) {
         if (customerDAO.findCustomer(customerVO)==null) {
@@ -30,6 +31,7 @@ public class CustomerServiceImpl implements CustomerService {
         return false;
     }
 
+//    로그인 하기
     @Override
     public boolean login(CustomerVO customerVO){
         String pw = customerVO.getCustomer_pw();
@@ -45,6 +47,7 @@ public class CustomerServiceImpl implements CustomerService {
         return false;
     }
 
+//    아이디 중복체크 하기
     @Override
     public boolean checkId(CustomerVO customerVO) {
         if(customerDAO.findCustomer(customerVO) == null){

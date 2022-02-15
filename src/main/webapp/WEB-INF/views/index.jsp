@@ -11,13 +11,15 @@
 <html>
 <head>
     <title>JAVA CINEMA</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo-color.ico" />
     <link href="/resources/css/reset.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/header.css?ver=1" rel="stylesheet" type="text/css">
-    <link href="/resources/css/footer.css?ver=1" rel="stylesheet" type="text/css">
-    <link href="/resources/css/main.css?ver=1" rel="stylesheet" type="text/css">
+    <link href="/resources/css/header.css?ver=2" rel="stylesheet" type="text/css">
+    <link href="/resources/css/footer.css?ver=2" rel="stylesheet" type="text/css">
+    <link href="/resources/css/main.css?ver=2" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +34,7 @@
 				<a href="#" ><i class="bi bi-search"></i></a>
 			</div>
             <div class="header-logo">
-				<a href="introduce"><img src="/resources/img/textLogo-color.png" class="logo-medium"></a>
+				<a href="introduce" data-transition="slideup"><img src="/resources/img/textLogo-color.png" class="logo-medium"></a>
 			</div>
             <div class="header-member">
 				<c:choose>
@@ -128,8 +130,8 @@
 	    				<img src="/resources/img/movie1.jpeg">
 	    				<div class="shadow-box"></div>
 	    				<div class="movie-chart_btn">
-	    					<button class="btn_movie-detail">상세정보</button>
-	    					<button class="btn_movie-ticketing">예매하기</button>
+	    					<button class="btn_movie-detail txt-sm">상세정보</button>
+	    					<button class="btn_movie-ticketing txt-sm">예매하기</button>
 	    				</div>
 	    			</div>
 	    			<div class="movie-info">
@@ -143,8 +145,8 @@
 	    				<img src="/resources/img/movie2.jpeg">
 	    				<div class="shadow-box"></div>
 	    				<div class="movie-chart_btn">
-	    					<button class="btn_movie-detail">상세정보</button>
-	    					<button class="btn_movie-ticketing">예매하기</button>
+	    					<button class="btn_movie-detail txt-sm">상세정보</button>
+	    					<button class="btn_movie-ticketing txt-sm">예매하기</button>
 	    				</div>
 	    			</div>
 	    			<div class="movie-info">
@@ -158,8 +160,8 @@
 	    				<img src="/resources/img/movie3.jpeg">
 	    				<div class="shadow-box"></div>
 	    				<div class="movie-chart_btn">
-	    					<button class="btn_movie-detail">상세정보</button>
-	    					<button class="btn_movie-ticketing">예매하기</button>
+	    					<button class="btn_movie-detail txt-sm">상세정보</button>
+	    					<button class="btn_movie-ticketing txt-sm">예매하기</button>
 	    				</div>
 	    			</div>
 	    			<div class="movie-info">
@@ -173,8 +175,8 @@
 	    				<img src="/resources/img/movie4.jpeg">
 	    				<div class="shadow-box"></div>
 	    				<div class="movie-chart_btn">
-	    					<button class="btn_movie-detail">상세정보</button>
-	    					<button class="btn_movie-ticketing">예매하기</button>
+	    					<button class="btn_movie-detail txt-sm">상세정보</button>
+	    					<button class="btn_movie-ticketing txt-sm">예매하기</button>
 	    				</div>
 	    			</div>
 	    			<div class="movie-info">
@@ -188,8 +190,8 @@
 	    				<img src="/resources/img/movie5.jpeg">
 	    				<div class="shadow-box"></div>
 	    				<div class="movie-chart_btn">
-	    					<button class="btn_movie-detail">상세정보</button>
-	    					<button class="btn_movie-ticketing">예매하기</button>
+	    					<button class="btn_movie-detail txt-sm">상세정보</button>
+	    					<button class="btn_movie-ticketing txt-sm">예매하기</button>
 	    				</div>
 	    			</div>
 	    			<div class="movie-info">
@@ -207,8 +209,8 @@
    		<div class="event-banner_inner">
    			<div class="inner_content">
    				<strong class="event-banner-title tit-xl">2022 자바멤버십 안내</strong>
-   				<p class="event-banner-text">쉽고 빠른 LEVEL-UP! <br> 스페셜관, 선택형 쿠폰까지 혜택 UPGRADE!</p>
-   				<p class="event-banner-date list-txt">2022.02.14 ~ 2022. 02.20</p>
+   				<p class="event-banner-text txt-lg">쉽고 빠른 LEVEL-UP! FRIENDS <br> 스페셜관, 선택형 쿠폰까지 혜택 UPGRADE!</p>
+   				<p class="event-banner-date txt-sm">2022.02.14 ~ 2022. 02.20</p>
    				<button class="event_btn txt-sm">이벤트 바로가기</button>
    			</div>
    		</div>
@@ -222,13 +224,13 @@
 	   		</div>   		
 	   		<div class="news_content">
 	    		<div class="content_notice">
-	   				<p class="notice_title main-txt">공지사항</p>
-	   				<p class="notice_content content-txt">[기타] 22년 VIP 선정 기준 변경 및 추가 기준 관련 안내</p>
+	   				<p class="notice_title tit-sm">공지사항</p>
+	   				<p class="notice_content txt-sm">[기타] 22년 VIP 선정 기준 변경 및 추가 기준 관련 안내</p>
 	    		</div>
 	   			<div class="content_service-center">
-	  					<p class="service-center_title main-txt">고객센터</p>
-	   				<p class="service-center_content content-txt">1234-1234</p>
-	   				<p class="service-center_content content-txt">운영시간(평일 00:00 ~ 00:00)</p>
+	  					<p class="service-center_title tit-sm">고객센터</p>
+	   				<p class="service-center_content txt-sm">1234-1234</p>
+	   				<p class="service-center_content txt-sm">운영시간(평일 00:00 ~ 00:00)</p>
 	   			</div>
 	   		</div>
    		</div>
@@ -242,23 +244,23 @@
     		<div class="footer-info">
 				<div class="footer-info_list">
 					<ul>
-						<li><a href="#">기업정보</a></li>
-						<li><a href="#">채용정보</a></li>
-						<li><a href="#">광고/제휴문의</a></li>
-						<li><a href="#">이메일무단수집거부</a></li>
-						<li><a href="#">이용약관</a></li>
-						<li><a href="#">개인정보처리방침</a></li>
-						<li><a href="#">윤리경영</a></li>
+						<li><a href="#" class="txt-xs">기업정보</a></li>
+						<li><a href="#" class="txt-xs">채용정보</a></li>
+						<li><a href="#" class="txt-xs">광고/제휴문의</a></li>
+						<li><a href="#" class="txt-xs">이메일무단수집거부</a></li>
+						<li><a href="#" class="txt-xs">이용약관</a></li>
+						<li><a href="#" class="txt-xs">개인정보처리방침</a></li>
+						<li><a href="#" class="txt-xs">윤리경영</a></li>
 					</ul>
 				</div>
 				<div class="footer-info_content">
-					<address class="footer-txt">(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</address>
+					<address class="txt-xs">(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</address>
 					<ul>
-						<li class="footer-txt">대표이사 : 신승용</li>
-						<li class="footer-txt">사업자등록번호 : 000-00-00000</li>
-						<li class="footer-txt">통신판매업신고번호 : 2022-휴먼교육센터-0203</li>
+						<li class="txt-xs">대표이사 : 신승용</li>
+						<li class="txt-xs">사업자등록번호 : 000-00-00000</li>
+						<li class="txt-xs">통신판매업신고번호 : 2022-휴먼교육센터-0203</li>
 					</ul>
-					<p class="footer-inner_copyright footer-txt">© CJ CGV. All Rights Reserved</p>
+					<p class="footer-inner_copyright txt-xs">© CJ CGV. All Rights Reserved</p>
 				</div>
 			</div>
     	</div>

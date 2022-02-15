@@ -1,18 +1,26 @@
 .panel {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.panel:last-of-type{
+    justify-content: center;
 }
 
 .panel-text {
     color: #5A4AE3;
-    font-weight: bold;
-    font-family: sans-serif;
+    font-weight: 700;
     font-size: 26px;
-    padding: 10% 5% 0 5%;
     line-height: 3;
+    padding-left: 10%;
 }
 
-.panel-text strong {
+strong.panel-text,
+.panel-text strong{
     font-size: 32px;
+    color: #5A4AE3;
 }
 
 .panel:nth-of-type(even) {
@@ -20,7 +28,9 @@
 }
 
 .panel:nth-of-type(even) .panel-text {
-    float: right;
+    text-align: end;
+    padding-left: 0;
+    padding-right: 10%;
 }
 
 .svg-path {
@@ -45,13 +55,15 @@
 }
 
 h1 {
-    position: fixed;
-    top: 10%;
-    left: 15%;
-    transform: translate(-50%, -50%);
-    font-family: sans-serif;
     text-transform: uppercase;
     color: #5A4AE3;
-    margin: 0;
-    font-size: 44px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.last-logo{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 80px;
+    z-index: 1000;
 }
