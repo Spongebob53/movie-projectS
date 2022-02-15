@@ -1,25 +1,21 @@
-/****** 배너 *********/
+/*****************************
+*********** 배너 영역 **********/
 section {
 	height: 300px;
 	font-family: 'Noto Sans KR', sans-serif;
 	background-color: gray;
 }
 
-
-/****** 메인 *********/
-main {
-	font-family: 'Noto Sans KR', sans-serif;
-}
-
+/*****************************
+*********** 메인 영역 **********/
 .main {
 	width: 1100px;
-	height: 300px; 
+	/* 	height: 300px; */
 	margin: 60px auto 0;
 }
 
 .detail-top {
 	padding-left: 320px;
-/* 	background-color: red; */
 	position: relative;
 }
 
@@ -42,8 +38,15 @@ main {
 }
 
 .movie-info_title {
-	margin-bottom: 20px;
-	line-height: 20px;
+	margin-bottom: 30px;
+}
+
+.movie-info_title span {
+	display: block;
+}
+
+.title-eng {
+	margin-top: 6px;
 }
 
 .movie-info_detail1 {
@@ -56,13 +59,66 @@ main {
 .movie-info_detail1 li {
 	float: left;
 }
+
 .movie-info_detail1 li:after {
 	content: '';
 	margin: 0 30px;
 }
 
-.movie-info_detail2 li {	
-	margin-bottom: 10px;
+.movie-info_detail2 {
+	width: 600px;
+	display: inline-block;
 }
 
+.movie-info_detail2 li {
+	margin-bottom: 15px;
+	color: #222;
+	line-height: 17px;
+}
 
+.movie-info strong {
+	padding-left: 10px;
+}
+
+.btn_movie-ticketing {
+	width: 100px;
+	height: 40px;
+	border-radius: 30px;
+	border: none;
+	background-color: rgb(90, 74, 227);
+	color: white;
+	cursor: pointer;
+	float: right;
+}
+
+.btn_movie-ticketing:hover {
+	background-color: rgba(90, 74, 227, 0.8);
+}
+
+/*********** 하단 영역 **********/
+.detail-bottom {
+	margin-top: 100px;
+}
+
+.btn_tab {
+	width: 49%;
+	height: 50px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: none;
+	cursor: pointer;
+}
+
+.movie-tab div {
+	margin-top: 70px;
+}
+
+.info-title {
+	margin-bottom: 30px;
+	display: block;
+}
+
+.info1-text {
+	height: 150px;
+	line-height: 18px;
+}
