@@ -13,11 +13,13 @@ public class MovieServiceImpl implements MovieService{
     @Autowired
     private MovieDAOImpl movieDAO;
 
+//    영화 목록 불러오기
     @Override
     public List<MovieVO> getMovieList() {
         return movieDAO.getMovieList();
     }
 
+//    영화 상세 정보 불러오기
     @Override
     public MovieVO getMovieDetail(MovieVO movieVO){
         return movieDAO.getMovieDetail(movieVO);

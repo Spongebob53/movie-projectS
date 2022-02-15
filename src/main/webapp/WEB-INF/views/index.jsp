@@ -11,6 +11,8 @@
 <html>
 <head>
     <title>JAVA CINEMA</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo-color.ico" />
     <link href="/resources/css/reset.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
@@ -32,7 +34,7 @@
 				<a href="#" ><i class="bi bi-search"></i></a>
 			</div>
             <div class="header-logo">
-				<a href="introduce"><img src="/resources/img/textLogo-color.png" class="logo-medium"></a>
+				<a href="introduce" data-transition="slideup"><img src="/resources/img/textLogo-color.png" class="logo-medium"></a>
 			</div>
             <div class="header-member">
 				<c:choose>

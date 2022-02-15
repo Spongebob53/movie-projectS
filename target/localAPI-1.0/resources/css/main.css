@@ -83,7 +83,7 @@ section {
 /*****************************
 *********** 메인 배너 **********/
 main {
-	font-family: 'Noto Sans KR', sans-serif;
+/* 	font-family: 'Noto Sans KR', sans-serif; */
 }
 
 .add-more_btn {
@@ -244,8 +244,9 @@ main {
 .event-banner-text {
 	margin-top: 25px;
 	word-break: normal;
-	line-height: 20px;
+	line-height: 22px;
 	display: block;
+	color: #222;
 }
 
 .event-banner-date {

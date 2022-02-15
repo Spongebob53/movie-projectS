@@ -1,3 +1,4 @@
+// 약관 모두 체크하기
 function checkAll(checkAll) {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach((checkbox) => {
@@ -5,6 +6,7 @@ function checkAll(checkAll) {
     });
 };
 
+// 회원가입 양식 확인 후 제출 버튼 활성화
 function confirm(checkId, checkPw, checkEmail){
     const btn = $(".btn_join");
     let text;
@@ -26,6 +28,7 @@ $(function () {
     let checkPw = false;
     let checkEmail = false;
 
+    // 아이디 입력값 중복 여부 확인하기
     $("input[name=customer_id]").blur(function () {
         const customer_id = $(this).val();
         $.ajax({
@@ -47,6 +50,7 @@ $(function () {
         });
     });
 
+    // 패스워드 입력값 1, 2차 일치 확인하기
     $("input[type=password]").blur(function () {
         const customer_pw = $("input[name=customer_pw]").val();
         const customer_chpw = $("input[name=customer_chpw]").val();
@@ -58,6 +62,7 @@ $(function () {
         confirm(checkId, checkPw, checkEmail);
     });
 
+    // 이메일 입력값 양식 확인하기
     $("input[type=email]").blur(function () {
         const customer_email = $(this).val();
         const email = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;

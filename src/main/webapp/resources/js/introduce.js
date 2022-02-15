@@ -1,3 +1,4 @@
+// 섹션별 스크롤 효과 주기
 function scrollifyPage() {
     const $body = $("body");
     const options = {
@@ -19,6 +20,7 @@ function scrollifyPage() {
     $.scrollify(options);
 }
 
+// 이미지 드로잉 효과 주기
 function drawSvg() {
     const $panel = $(".panel");
 

@@ -13,11 +13,13 @@ public class MovieDAOImpl implements MovieDAO{
     @Autowired
     private SqlSessionTemplate mybatis;
 
+//    영화 리스트 불러오기
     @Override
     public List<MovieVO> getMovieList() {
         return mybatis.selectList("movie.getMovieList");
     }
 
+//    영화 상세 정보 불러오기
     @Override
     public MovieVO getMovieDetail(MovieVO movieVO){
         return mybatis.selectOne("movie.getMovieDetail", movieVO);
