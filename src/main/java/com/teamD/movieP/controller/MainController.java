@@ -1,7 +1,11 @@
 package com.teamD.movieP.controller;
 
+import com.teamD.movieP.domain.movie.MovieVO;
+import com.teamD.movieP.domain.theater.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -11,9 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import com.teamD.movieP.domain.customer.*;
-import com.teamD.movieP.domain.movie.MovieVO;
 import com.teamD.movieP.service.CustomerService;
 import com.teamD.movieP.service.MovieService;
+import com.teamD.movieP.service.TheaterService;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,23 +29,22 @@ public class MainController {
     private MovieService movieService;
     @Autowired
     private CustomerService customerService;
+    @Autowired
+    private TheaterService theaterService;
 
     @RequestMapping("/{step}")
     public String step(@PathVariable String step) {
         return step;
     }
 
-//    메인페이지
     @RequestMapping("/")
     public ModelAndView home() {
         ModelAndView m = new ModelAndView();
         m.setViewName("index");
-//        로딩 시 영화 리스트 불러오기
         m.addObject("movieList", movieService.getMovieList());
         return m;
     }
 
-//    회원가입 하기
     @RequestMapping("joinCustomer")
     public String joinCustomer(CustomerVO customerVO, CustomerInfoVO customerInfoVO, CustomerTermVO customerTermVO) {
         if (customerService.joinCustomer(customerVO, customerInfoVO, customerTermVO)) {
@@ -50,7 +53,6 @@ public class MainController {
         return "join";
     }
 
-//    로그인 하기
     @RequestMapping("checkLogin")
     public String checkLogin(CustomerVO customerVO, HttpSession session, HttpServletResponse response, HttpServletRequest request){
         if(session.getAttribute("customer_id") != null){
@@ -83,14 +85,12 @@ public class MainController {
         return "login";
     }
 
-//    로그아웃 하기
     @RequestMapping("logout")
     public String logout(HttpSession session){
         session.removeAttribute("customer_id");
         return "redirect:/";
     }
 
-//    상세 영화 페이지
     @RequestMapping("movieDetail")
     public ModelAndView movieDetail(MovieVO movieVO){
         ModelAndView m = new ModelAndView();
@@ -99,7 +99,6 @@ public class MainController {
         return m;
     }
 
-//    아이디 중복체크
     @ResponseBody
     @RequestMapping("checkId")
     public String checkId(CustomerVO customerVO){
@@ -108,4 +107,19 @@ public class MainController {
         }
         return "0";
     }
+    
+    @RequestMapping("ticketing")
+    public void ticketing(AreaVO areaVO, Model model) {
+    	model.addAttribute("area",theaterService.ticketing_area(areaVO));
+    }
+    
+    @ResponseBody
+    @RequestMapping("ticketing_theater")
+    public void ticketing_theater(Model model,AreaVO areaVO) {
+    	System.out.println("아리아 : " + areaVO.getArea_id() );
+    	model.addAttribute("theater",theaterService.ticketing_theater(areaVO));
+	}
+    
+    
+    
 }
