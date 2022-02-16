@@ -15,5 +15,5 @@ public interface TheaterService {
 
 	List<TheaterVO> ticketing_theater(AreaVO areaVO);
 
-	List<Movie_showVO> ticketing_movie_show(Movie_showVO movie_showVO);
+	List<Movie_showVO> ticketing_movie_show(TheaterVO theaterVO);
 }

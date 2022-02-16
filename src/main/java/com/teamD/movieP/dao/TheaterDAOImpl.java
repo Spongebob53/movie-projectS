@@ -32,7 +32,7 @@ public class TheaterDAOImpl implements TheaterDAO{
 	}
 
 	@Override
-	public List<Movie_showVO> ticketing_movie_show(Movie_showVO movie_showVO) {
-		return mybatis.selectList("theater.ticketing_movie_show", movie_showVO);
+	public List<Movie_showVO> ticketing_movie_show(TheaterVO theaterVO) {
+		return mybatis.selectList("theater.ticketing_movie_show", theaterVO);
 	}
 }
