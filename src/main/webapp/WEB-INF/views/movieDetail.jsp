@@ -13,6 +13,8 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
 	<script type="text/javascript" src="/resources/js/movieDetail.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico" />
     <link href="/resources/css/reset.css?ver=3" rel="stylesheet" type="text/css">
     <link href="/resources/css/button.css?ver=3" rel="stylesheet" type="text/css">
@@ -28,13 +30,13 @@
 </head>
 <body>
 
-	<header>
-        <div class="header">
+	<header class="header">
+        <div class="head">
             <div class="header-search">
 				<a href="#" ><i class="bi bi-search"></i></a>
 			</div>
             <div class="header-logo">
-				<a href="/"><img src="/resources/img/logo/textLogo-color.png" class="logo-medium"></a>
+				<a href="introduce" data-transition="slideup"><img src="/resources/img/logo/textLogo-color.png" class="logo-medium"></a>
 			</div>
             <div class="header-member">
 				<c:choose>
@@ -51,8 +53,8 @@
             </div>
         </div>
     </header>
-    
-    <nav>
+
+    <nav class="navigation">
 		<ul class="nav">
 			<li><a href="#" class="txt-md">영화</a>
 				<ul>
@@ -61,7 +63,7 @@
 				</ul></li>
 			<li><a href="ticketing" class="txt-md">예매</a>
 				<ul>
-					<li><a href="#" class="txt-sm">빠른예매</a></li>
+					<li><a href="ticketing" class="txt-sm">빠른예매</a></li>
 					<li><a href="#" class="txt-sm">상영시간표</a></li>
 				</ul></li>
 			<li><a href="#" class="txt-md">극장</a>
@@ -129,34 +131,73 @@
 							저주를 내리는데…과연 옷코츠는 게토를 막을 수 있을까? 그리고 리카의 저주를 풀 수 있을까?
 						</p>
 					</div>
-					<div class="movie-tab_info">			
+
+					<div class="movie-tab_info">
 						<div class="info_titile">
 							<strong class="tit-sm">트레일러</strong>
 							<button class="btn_add-more txt-xs">더 보기</button>
 						</div>
-						<div class="info_trailer">
-							<button class="btn_arrow">
+						<div class="slide">
+							<button class="btn_arrow prev">
 								<i class="bi bi-chevron-left"></i>
 							</button>
 							<div class="trailer-box">
-								<div class="trailer-card">
-									<img src="/resources/img/moviePoster/.jpeg">
+								<div class="trailer-list-box">
+									<div class="trailer-card">
+										<img src="/resources/img/trailer/trailer_01.jpeg">
+										<div class="trailer_btn">
+											<button class="btn_play">dd</button>
+										</div>
+
+									</div>
+									<div class="trailer-info">
+										<span class="txt-sm">티저 예고편</span>
+									</div>
 								</div>
-								<span class="txt-sm">티저 예고편</span>
+								<div class="trailer-list-box">
+									<div class="trailer-card">
+										<img src="/resources/img/trailer/trailer_01.jpeg">
+										<div class="trailer_btn">
+											<button class="btn_play">dd</button>
+										</div>
+
+									</div>
+									<div class="trailer-info">
+										<span class="txt-sm">티저 예고편</span>
+									</div>
+								</div>
+								<div class="trailer-list-box">
+									<div class="trailer-card">
+										<img src="/resources/img/trailer/trailer_01.jpeg">
+										<div class="trailer_btn">
+											<button class="btn_play">dd</button>
+										</div>
+
+									</div>
+									<div class="trailer-info">
+										<span class="txt-sm">티저 예고편</span>
+									</div>
+								</div>
+								<div class="trailer-list-box">
+									<div class="trailer-card">
+										<img src="/resources/img/trailer/trailer_01.jpeg">
+										<div class="trailer_btn">
+											<button class="btn_play">dd</button>
+										</div>
+
+									</div>
+									<div class="trailer-info">
+										<span class="txt-sm">티저 예고편</span>
+									</div>
+								</div>
+
 							</div>
-							<div class="trailer-box">
-								<div class="trailer-card"></div>
-								<span class="txt-sm">티저 예고편</span>
-							</div>
-							<div class="trailer-box">
-								<div class="trailer-card"></div>
-								<span class="txt-sm">티저 예고편</span>
-							</div>
-							<button class="btn_arrow">
+							<button class="btn_arrow next">
 								<i class="bi bi-chevron-right"></i>
 							</button>
 						</div>
 					</div>
+
 					<div class="movie-tab_info">
 						<div class="info_titile">
 							<strong class="tit-sm">스틸컷</strong>

@@ -33,8 +33,8 @@
 
 <body>
 
-	 <header>
-        <div class="header">
+	 <header class="header">
+        <div class="head">
             <div class="header-search">
 				<a href="#" ><i class="bi bi-search"></i></a>
 			</div>
@@ -57,7 +57,7 @@
         </div>
     </header>
 
-    <nav>
+    <nav class="navigation">
 		<ul class="nav">
 			<li><a href="#" class="txt-md">영화</a>
 				<ul>

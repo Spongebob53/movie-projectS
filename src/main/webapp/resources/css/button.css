@@ -12,6 +12,33 @@
 	font-weight: 400;
 }
 
+.btn_tab {
+	width: 49%;
+	height: 50px;
+	border: none;
+	border-bottom: 1px solid rgb(90, 74, 227);
+	background: none;
+	cursor: pointer;
+}
+
+.active {
+	border-radius: 15px 15px 0 0;
+	background-color: rgb(90, 74, 227);
+	color: white;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.btn_play {
+	width: 45px;
+	height: 45px;
+	background-color: white;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+	color: #222;
+}
+
 .btn_arrow {
 	width: 45px;
 	height: 45px;

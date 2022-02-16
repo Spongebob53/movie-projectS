@@ -1,6 +1,6 @@
 /*****************************
 *********** 헤더 영역 **********/
-header {
+.header {
 	border-bottom: 1px solid #ddd;
 	text-align: center;
 	display: flex;
@@ -15,7 +15,7 @@ header {
 	background-color: white;
 }
 
-.header {
+.head {
 	overflow: auto;
 	width: 1200px;
 }
@@ -45,7 +45,7 @@ header {
 
 /*****************************
 *********** 네비 영역 **********/
-nav {
+.navigation {
 	border-bottom: 1px solid rgb(90, 74, 227);
 	text-align: center;
 	display: flex;
