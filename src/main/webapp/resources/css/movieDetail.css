@@ -1,19 +1,44 @@
 /*****************************
 *********** 배너 영역 **********/
-section {
+.movie-detail_banner {
 	margin-top: 122px;
-	height: 300px;
-	font-family: 'Noto Sans KR', sans-serif;
-	background-color: gray;
+	height: 350px;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+}
+
+.banner-slide:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.25)
+		25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 75%, #000 100%);
+	z-index: 1;
+}
+
+.banner-slide {
+	display: flex;
+	width: 580px;
+	height: 100%;
+	overflow: hidden;
+	justify-content: space-between;
+}
+
+.banner-slide img {
+	width: 100%;
+	height: 100%;
 }
 
 /*****************************
 *********** 메인 영역 **********/
-.main {
+.movie-detail_main {
 	width: 1100px;
 	margin: 60px auto 0;
 }
-
 
 /*****************************
 *********** 상단 영역 **********/
@@ -87,14 +112,12 @@ section {
 	line-height: 17px;
 }
 
-
 /*****************************
 *********** 하단 영역 **********/
 .detail-bottom {
 	margin-top: 100px;
 }
 
-/*********** 시놉시스 영역 **********/
 .movie-tab_info {
 	margin-top: 70px;
 }
@@ -109,7 +132,10 @@ section {
 	text-overflow: ellipsis;
 }
 
-.slide {
+/*********** 시놉시스 영역 **********/
+
+/*********** 트레일러 영역 **********/
+.trailer-slide {
 	width: 1100px;
 	display: flex;
 	justify-content: space-around;
@@ -118,50 +144,13 @@ section {
 	position: relative;
 }
 
-.trailer-box {
+.trailer-slide_box {
 	width: 940px;
 	height: 230px;
 	display: flex;
 	justify-content: space-between;
 	overflow: overlay;
 	align-items: center;
-	counter-reset: count;
-}
-
-.trailer_btn {
-	width: 296px;
-	height: 200px;
-	background-color: rgba(0, 0, 0, 0.4);
-	border-radius: 15px;
-	display: flex;
-	position: absolute;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.trailer-info {
-	display: flex;
-	justify-content: center;
-}
-
-.trailer-info span {
-	display: block;
-	margin-top: 10px;
-	float: left;
-}
-
-/*****************************/
-
-
-.info_trailer button {
-	margin-bottom: 25px;
-}
-
-.trailer-box span {
-	display: block;
-	text-align: center;
-	margin-top: 10px;
 }
 
 .trailer-card {
@@ -178,39 +167,91 @@ section {
 	border-radius: 15px;
 }
 
-.info_still-cut {
+.trailer_btn {
+	width: 296px;
+	height: 200px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 15px;
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.trailer-info {
+	width: 296px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*********** 스틸컷 영역 **********/
+.still-cut-slide {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.info_btn {
+.still-cut_btn {
 	display: flex;
 	height: 100px;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
-/* .info_still-cut button { */
-/* 	display: block; */
-/* } */
-.still-cut_thumb {
+.still-cut_view-slide_box {
+	width: 800px;
 	height: 500px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	overflow: overlay;
+}
+
+.still-cut_thumb-slide_box {
+	width: 160px;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: overlay;
 }
 
 .view-card {
 	width: 800px;
 	height: 500px;
-	background-color: #ddd;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.view-card img {
+	width: 100%;
+	height: 100%;
 	border-radius: 15px;
 }
 
 .thumb-card {
-	width: 180px;
-	height: 110px;
-	background-color: #ddd;
+	width: 160px;
+	height: 100px;
 	border-radius: 15px;
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.thumb-card img {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	opacity: 0.5;
+}
+
+.thumb-list-box .slick-list {
+	height: 500px;
+}
+
+.slick-vertical .slick-slide {
+	height: 100px;
+	border: none;
 }
