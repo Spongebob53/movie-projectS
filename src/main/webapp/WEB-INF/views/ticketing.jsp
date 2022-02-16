@@ -25,20 +25,27 @@
 <ul>
 	<c:forEach items="${area}" var="area">
 		<li>
-		<button class="area" value="${area.area_id}">${ area.area_name }</button>
+			<button class="area" value="${area.area_id}">${ area.area_name }</button>
 		</li>
 	</c:forEach>
 </ul>
-<!-- 상영관 목록 -->
-<ul>
-	<c:forEach items="${theater }" var="theater">
-		<li>
-		<input type="hidden" name="theater_id" value="${theater.theater_id }">
-		<button class="theater">${ theater.theater_name }</button>
-		</li>
-	
-	</c:forEach>
+<!-- 극장 목록 -->
+<ul class="theater">
+<%-- 	<c:forEach items="${theater}" var="theater"> --%>
+<!-- 		<li> -->
+<%-- 			<button class="theater" value="${theater.theater_id }">${ theater.theater_name }</button> --%>
+<!-- 		</li> -->
+<%-- 	</c:forEach> --%>
+</ul>
 
+
+<!-- 영화 목록 -->
+<ul>
+	<c:forEach items="${movie}" var="movie_title">
+		<li>
+			<button class="movie_title" value="${movie_show.movie_id }">${ movie_show.moviee_id }</button>
+		</li>
+	</c:forEach>
 </ul>
 
 

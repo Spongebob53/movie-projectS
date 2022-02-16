@@ -17,12 +17,13 @@
     <select id="ticketing_theater" parameterType="theaterArea" resultType="theater">
         SELECT *
         FROM theater
-        WHERE theater_id LIKE #{area_id}
+        WHERE theater_id LIKE '${area_id}%'
     </select>
     
-    <select id="ticketing_movie_show" resultType="theaterShow">
+    <select id="ticketing_movie_show" parameterType="theater" resultType="theaterShow">
         SELECT *
         FROM movie_show
+        WHERE room_id LIKE '${theater_id}%'
     </select>
 
 </mapper>
