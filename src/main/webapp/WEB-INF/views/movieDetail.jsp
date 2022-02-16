@@ -82,7 +82,6 @@
     
     <section>
     	<div class="movie-detail-banner">
-    	
     	</div>
     </section>
     

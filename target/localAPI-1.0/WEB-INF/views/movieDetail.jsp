@@ -11,13 +11,13 @@
 <head>
 	<title>영화이름</title>
 	<link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico" />
-    <link href="/resources/css/reset.css?ver=1" rel="stylesheet" type="text/css">
-    <link href="/resources/css/button.css?ver=1" rel="stylesheet" type="text/css">
+    <link href="/resources/css/reset.css?ver=2" rel="stylesheet" type="text/css">
+    <link href="/resources/css/button.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/header.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/footer.css?ver=3" rel="stylesheet" type="text/css">
-    <link href="/resources/css/movieDetail.css?ver=2" rel="stylesheet" type="text/css">
+    <link href="/resources/css/footer.css?ver=2" rel="stylesheet" type="text/css">
+    <link href="/resources/css/movieDetail.css?ver=3" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,7 +82,6 @@
     
     <section>
     	<div class="movie-detail-banner">
-    	
     	</div>
     </section>
     
@@ -133,7 +132,7 @@
 							<button class="btn_add-more txt-xs">더 보기</button>
 						</div>
 						<div class="info_trailer">
-							<button class="btn_arrow _left">
+							<button class="btn_arrow">
 								<i class="bi bi-chevron-left"></i>
 							</button>
 							<div class="trailer-box">
@@ -148,7 +147,7 @@
 								<div class="trailer-card"></div>
 								<span class="txt-sm">티저 예고편</span>
 							</div>
-							<button class="btn_arrow _right">
+							<button class="btn_arrow">
 								<i class="bi bi-chevron-right"></i>
 							</button>
 						</div>
@@ -162,12 +161,12 @@
 							<div class="still-cut_view">
 								<div class="view-card"></div>
 							</div>
-							<div>
-								<button class="btn_arrow _left">
-									<i class="bi bi-chevron-left"></i>
+							<div class="info_btn">
+								<button class="btn_arrow">
+									<i class="bi bi-chevron-up"></i>
 								</button>
-								<button class="btn_arrow _left">
-									<i class="bi bi-chevron-right"></i>
+								<button class="btn_arrow">
+									<i class="bi bi-chevron-down"></i>
 								</button>
 							</div>
 							<div class="still-cut_thumb">

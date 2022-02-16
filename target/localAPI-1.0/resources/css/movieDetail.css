@@ -141,9 +141,16 @@ section {
 	align-items: center;
 }
 
-.info_still-cut button {
-	display: block;
+.info_btn {
+	display: flex;
+	height: 100px;
+	flex-direction: column;
+    justify-content: space-between;
 }
+
+/* .info_still-cut button { */
+/* 	display: block; */
+/* } */
 
 .still-cut_thumb {
 	height: 500px;

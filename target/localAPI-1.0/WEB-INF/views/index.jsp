@@ -20,7 +20,7 @@
     <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/header.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/footer.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/main.css?ver=5" rel="stylesheet" type="text/css">
+    <link href="/resources/css/main.css?ver=4" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,12 +102,16 @@
 		</div>
     </section>
 
-    <main>
+    <main> 	
     	<div class="main_movie-chart">
     		<div class="movie-chart_titile">
 	    		<h1 class="title tit-xl">영화 순위</h1>
 	    		<button class="btn_add-more txt-xs">더 보기</button>
     		</div>
+    		<div class="slide">
+				<button class="btn_arrow">
+					<i class="bi bi-chevron-left"></i>
+				</button>
 			<div class="movie-chart_content">
 				<c:if test="${movieList!=null}">
 					<c:forEach items="${movieList}" var="movie">
@@ -129,7 +133,8 @@
 						</div>
 					</c:forEach>
 				</c:if>
-<%--    			<div class="movie-list-box">--%>
+				
+				<%--    			<div class="movie-list-box">--%>
 <%--	    			<div class="movie-card">--%>
 <%--	    				<img src="/resources/img/moviePoster/자두야.jpeg">--%>
 <%--	    				<div class="shadow-box"></div>--%>
@@ -144,6 +149,10 @@
 <%--	    				<span class="movie-info_rate txt-sm">예매율 50%</span>--%>
 <%--	    			</div>--%>
 <%--    			</div>--%>
+    		</div>
+    		<button class="btn_arrow">
+					<i class="bi bi-chevron-right"></i>
+				</button>
     		</div>
     	</div>
     </main>

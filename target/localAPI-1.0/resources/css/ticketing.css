@@ -1,0 +1,122 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+}
+
+.container header{
+    background-color: blue;
+    height: 50px;
+    border-radius: 15px;
+    color: white;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 300px 300px 400px;
+    grid-template-rows: 50px 500px 80px;
+    border: 1px solid black;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.container article{
+    border-radius: 15px;
+    background-color: #5A4AE3;
+}
+
+.theater-container_ops{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-bottom: 1px solid white;
+    height: 50px;
+}
+
+.theater-container_ops div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theater{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.theater li{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    height: 40px;
+}
+
+.movie-container{
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+
+.movie-container_ops{
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies-item{
+    background-color: red;
+    padding: 15px;
+}
+
+.days{
+    display: flex;
+    overflow: auto;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.days-day{
+    padding: 15px;
+}
+
+.days-day_num{
+    margin-bottom: 10px;
+}
+
+.time-container_theater{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+}
+
+.time-container_theater-movie{
+    margin-bottom: 20px;
+    background-color: #fae100;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.theater-schedule{
+    background-color: #666666;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.book-process{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: red;
+    border-radius: 15px;
+}
+
+.book-process div{
+    color:white;
+}

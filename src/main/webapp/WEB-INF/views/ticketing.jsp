@@ -9,6 +9,7 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 </head>
 <body>
+
 <c:choose>
     <c:when test="${sessionScope.customer_id == null}">
         <a href="login">로그인</a>

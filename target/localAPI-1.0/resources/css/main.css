@@ -56,14 +56,16 @@ section {
 
 /*********** 메인 배너 버튼 **********/
 .main-banner_btn {
+	display: flex;
 	margin-top: 30px;
+	justify-content: space-evenly;
 }
-
 
 /*****************************
 *********** 메인 배너 **********/
 main {
-/* 	font-family: 'Noto Sans KR', sans-serif; */
+	/* 	font-family: 'Noto Sans KR', sans-serif; */
+	
 }
 
 .title {
@@ -75,60 +77,52 @@ main {
 	width: 1200px;
 }
 
-.movie-chart_content {
-	margin-top: 30px;
+.slide {
+	width: 1200px;
 	display: flex;
 	justify-content: space-between;
-	overflow: auto;
+	align-items: center;
 }
 
-.movie-list-box {
-	counter-reset: chart 0;
+.movie-chart_content {
+	width: 1040px;
+	margin-top: 30px;
+	height: 430px;
+	display: flex;
+	justify-content: space-between;
+	overflow: overlay;
+	align-items: center;
 }
 
 .movie-card {
-	width: 220px;
-	height: 320px;
+	width: 240px;
+	height: 360px;
 	background-color: lightgray;
 	border-radius: 15px;
 	align-items: center;
 	justify-content: center;
 	display: flex;
-	margin-right: 30px;
+	margin-right: 25px;
 }
 
-.movie-chart_btn button~button {
-	margin-top: 15px;
+.shadow-box {
+	width: 240px;
+	height: 360px;
+	border-radius: 15px;
+	display: none;
+	position: absolute;
 }
 
-/* .movie-card:after { */
-/* 	content: counter(chart); */
-/* 	counter-increment: chart; */
-/* 	position: absolute; */
-/* 	left: 10px; */
-/* 	bottom: 10px; */
-/* 	font-weight: 400; */
-/* 	font-size: 50px; */
-/* 	font-style: italic; */
-/* 	color: #fff; */
-/* } */
 .movie-card img {
 	width: 100%;
 	height: 100%;
 	border-radius: 15px;
 	display: inline-block;
+	height: 100%;
 }
 
 .movie-card:hover .movie-chart_btn {
-	display: inline-block;
-}
-
-.shadow-box {
-	width: 220px;
-	height: 310px;
-	border-radius: 15px;
-	display: none;
-	position: absolute;
+	display: flex;
 }
 
 .movie-card:hover .shadow-box {
@@ -136,15 +130,16 @@ main {
 	display: inline-block;
 }
 
-.movie-chart_btn button {
-	display: block;
-}
-
 .movie-chart_btn {
 	display: none;
 	align-items: center;
 	justify-content: center;
 	position: absolute;
+	flex-direction: column;
+}
+
+.movie-chart_btn button ~button {
+	margin-top: 15px;
 }
 
 .movie-info_title {
