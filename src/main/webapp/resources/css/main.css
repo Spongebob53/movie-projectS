@@ -63,11 +63,6 @@ section {
 
 /*****************************
 *********** 메인 배너 **********/
-main {
-	/* 	font-family: 'Noto Sans KR', sans-serif; */
-	
-}
-
 .title {
 	display: inline-block;
 }
@@ -80,8 +75,10 @@ main {
 .slide {
 	width: 1200px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
+	overflow: hidden;
+	position: relative;
 }
 
 .movie-chart_content {
@@ -92,6 +89,19 @@ main {
 	justify-content: space-between;
 	overflow: overlay;
 	align-items: center;
+	counter-reset: count;	
+}
+
+.movie-card:after {	
+	content: counter(count);
+    counter-increment: count;
+	position: relative;
+    left: 40px;
+    bottom: -290px;
+	font-weight: 400;
+    font-size: 60px;
+    font-style: italic;
+    color: #fff;
 }
 
 .movie-card {
@@ -99,10 +109,8 @@ main {
 	height: 360px;
 	background-color: lightgray;
 	border-radius: 15px;
-	align-items: center;
-	justify-content: center;
 	display: flex;
-	margin-right: 25px;
+	margin-right: 25px;	
 }
 
 .shadow-box {
@@ -131,11 +139,15 @@ main {
 }
 
 .movie-chart_btn {
+	width: 240px;
+	height: 360px;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 15px;
 	display: none;
-	align-items: center;
-	justify-content: center;
 	position: absolute;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .movie-chart_btn button ~button {
@@ -228,6 +240,8 @@ main {
 	background-color: rgb(90, 74, 227);
 	border: 1px solid rgb(90, 74, 227);
 	padding: 0 25px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .notice_title {
@@ -239,6 +253,9 @@ main {
 .notice_content {
 	display: inline-block;
 	color: white;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .notice_content:before {
@@ -246,7 +263,12 @@ main {
 	margin: 0 20px;
 }
 
-.content_service-center {
+.notice-wrapper {
+	width: 400px;
+	margin-top: 20px;
+}
+
+.content_center {
 	float: right;
 	width: 480px;
 	height: 60px;
@@ -255,18 +277,18 @@ main {
 	padding: 0 25px;
 }
 
-.service-center_title {
+.center_title {
 	display: inline-block;
 	margin-top: 20px;
 	color: rgb(90, 74, 227);
 }
 
-.service-center_content {
+._content {
 	display: inline-block;
 	color: rgb(90, 74, 227);
 }
 
-.service-center_content:before {
+.center_content:before {
 	content: ' ';
 	margin: 0 30px;
 }
