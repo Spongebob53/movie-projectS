@@ -5,6 +5,7 @@ import java.util.List;
 import com.teamD.movieP.domain.movie.MovieVO;
 import com.teamD.movieP.domain.theater.AreaVO;
 import com.teamD.movieP.domain.theater.Movie_showVO;
+import com.teamD.movieP.domain.theater.RoomVO;
 import com.teamD.movieP.domain.theater.TheaterVO;
 
 public interface TheaterDAO {
@@ -15,5 +16,5 @@ public interface TheaterDAO {
 
 	List<TheaterVO> ticketing_theater(AreaVO areaVO);
 
-	List<Movie_showVO> ticketing_movie_show(TheaterVO theaterVO);
+	List<Object> ticketing_movie_time(Movie_showVO movie_showVO);
 }

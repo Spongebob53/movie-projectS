@@ -1,8 +1,11 @@
 $(function() {
 	
-	var choice = 0;
+	var theater_choice = 0;
+	var movie_choice = 0;
 	let area_id;
 	let theater_id;
+	let room_id;
+	let movie_id;
 	// 지역선택
 	$('.area').click(function(){
 
@@ -11,7 +14,7 @@ $(function() {
 		$.ajax( {
 			url : 'ticketing_theater',
 			type : 'post',
-			data : {area_id : area_id},
+			data : {"area_id" : area_id},
 			dataType : 'json',
 			success : function(data) {
 				
@@ -19,8 +22,8 @@ $(function() {
 				
 				t.children('li').remove();
 				
-				for(var vo in data){
-					t.append('<li><input type="hidden" value="'+data[vo].theater_name+'" />'+  '<button class="theater" value="'+data[vo].theater_id+'">'+data[vo].theater_name+'</button></li>')
+				for(var theater in data){
+					t.append('<li><input type="hidden" value="'+data[theater].theater_name+'" />'+  '<button class="theater" value="'+data[theater].theater_id+'">'+data[theater].theater_name+'</button></li>')
 				}
 
 			},
@@ -36,63 +39,95 @@ $(function() {
 	
 	// 극장선택
 	$(document).on("click",".theater",function(){
-		
 		$(this).each(function(){
 			
-			let theater_name = $(this).prev().val();
+			theater_choice = 1;
 			
-			alert(theater_name);
+			theater_id = $(this).val();
+			
+			let theater_name = $(this).prev().val();
 			
 			var b_t = $('.book-process_theater');
 			
 			b_t.next().text(">"+theater_name);
 			
-			aaa();
 			
-		});
-	})
-	
-//			$.ajax({
-//				url: 'ticketing_movie_title',
-//				type: 'post',
-//				data: { theater_id: theater_id },
-//				dataType: 'text',
-//				success: function(data) {
-//					alert("성공");
-//				},
-//				error: function() {
-//					alert("error");
-//				}
-//	
-//			})
-//		
-//			})
-//	
-//	})
-	// 영화선택
-	$('.movie_title').click(function(){
-		
-		let room_id = $(this).val();
-		
-		$.ajax( {
-			url : 'ticketing_movie_show',
-			type : 'post',
-			data : {theater_id : theater_id},
-			dataType : 'text',
-			success : function(data) {
-//				alert("성공");
-			},
-			error : function() {
-				alert("error");
+			if(movie_choice == 1) {
+				aaa();
+			} else {
+				alert("영화선택해주세요");
 			}
 			
 		})
+	})
 	
+	// 영화선택
+	$('.movie_title').click(function(){
+		
+		movie_choice = 1;
+		
+		movie_id = $(this).val();
+		
+		let movie_title = $(this).prev().val();
+			
+			var b_m = $('.book-process_movie');
+			
+			b_m.next().text(">"+movie_title);
+			
+			if(theater_choice == 1) {
+				aaa();
+			} else {
+				alert("상영관선택해주세요");
+			}
 	
 	})
 	
+	// 영화시간 출력
 	function aaa() {
-		alert("123");
+		alert("영화시간 출력");
+
+		$.ajax({
+			url: 'ticketing_movie_time',
+			type: 'post',
+			data: { "movie_id": movie_id, "theater_id": theater_id },
+			dataType: 'json',
+			success: function(data) {
+				$('.time-container_theater-movie').text(data[0].movie_title);
+
+				for (var movie_time in data) {
+					$('.time-container_theater').append(
+						'<div class="theater-schedule"><input type="hidden" value="' + data[movie_time].movie_show_id + '" /><div class="theater-schedule_time">' + data[movie_time].show_start + '</div>' +
+						'<div class="theater-schedule_theater">' + data[movie_time].room_seat + '/' + data[movie_time].room_seat + ' ' + data[movie_time].room_name + '</div></div>'
+
+					)
+				}
+			},
+			error: function() {
+				alert("error");
+			}
+		})
 	}
 	
+	$(document).on("click",".theater-schedule",function(){
+		$(this).each(function(){
+			var show_start = $(this).children('.theater-schedule_time').text();
+				
+			var b_t = $('.book-process_time');
+			
+			b_t.next().text(">"+show_start);
+			
+			$('.book-process').children('input').remove();
+			$('.book-process').append('<input type="hidden" value="' + $(this).children('.theater-schedule_time').prev().val() + '" />')
+			console.log($(this).children('.theater-schedule_time').prev().val());
+			
+			
+			
+		})
+	})
+	
+
+	
+	
+	
+
 })

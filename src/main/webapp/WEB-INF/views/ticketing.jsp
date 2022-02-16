@@ -91,17 +91,13 @@
 			<c:forEach items="${area}" var="area">
 				<li>
 					<input type="hidden" value="${ area.area_name }">
-					<button class="area" value="${area.area_id}"">${ area.area_name }</button>
+					<button class="area" value="${area.area_id}">${ area.area_name }</button>
 				</li>
 			</c:forEach>
 		</ul>
 		<!-- 극장 목록 -->
 		<ul class="theaterList">
-			<%-- 	<c:forEach items="${theater}" var="theater"> --%>
-			<!-- 		<li> -->
-			<%-- 			<button class="theater" value="${theater.theater_id }">${ theater.theater_name }</button> --%>
-			<!-- 		</li> -->
-			<%-- 	</c:forEach> --%>
+		
 		</ul>
 
 
@@ -109,10 +105,22 @@
 		<ul>
 			<c:forEach items="${movie_title}" var="movie_title">
 				<li>
+					<input type="hidden" value="${ movie_title.movie_title }">
 					<button class="movie_title" value="${movie_title.movie_id }">${ movie_title.movie_title }</button>
 				</li>
 			</c:forEach>
 		</ul>
+		
+		<!-- 날짜 -->
+		
+		<!-- 영화 시간 목록 -->
+		<div class="time-container_theater">
+                <div class="time-container_theater-movie">해적</div>
+                <div class="theater-schedule">
+                    <div class="theater-schedule_time">00:00</div>
+                    <div class="theater-schedule_theater">100/100 2관</div>
+                </div>
+            </div>
 
 		<form class="book-process" action="#" method="get">
 			<div class="book-process_theater">선택한 극장</div>

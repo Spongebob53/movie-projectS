@@ -20,10 +20,10 @@
         WHERE theater_id LIKE '${area_id}%'
     </select>
     
-    <select id="ticketing_movie_show" parameterType="theater" resultType="theaterShow">
-        SELECT *
-        FROM movie_show
-        WHERE room_id LIKE '${theater_id}%'
+    <select id="ticketing_movie_time" parameterType="theaterShow" resultType="theaterShow">
+       SELECT movie_show_id, show_start, room_name, room_seat,movie_title
+       FROM movie_show NATURAL JOIN room NATURAL JOIN movie
+       WHERE movie_id = '${movie_id}' AND room_id LIKE '${theater_id}%'
     </select>
 
 </mapper>
