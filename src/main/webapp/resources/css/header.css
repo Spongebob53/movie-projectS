@@ -7,6 +7,12 @@ header {
 	align-items: center;
 	justify-content: center;
 	height: 80px;
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	z-index: 200;
+	background-color: white;
 }
 
 .header {
@@ -45,6 +51,12 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: fixed;
+	top:81;
+	left: 0;
+	right: 0;
+	z-index: 200;
+	background-color: white;
 }
 
 .nav {

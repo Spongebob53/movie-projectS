@@ -1,6 +1,7 @@
 /*****************************
 *********** 메인 배너 **********/
 section {
+	margin-top: 122px;
 	background-color: #000;
 	height: 500px;
 	text-align: center;
@@ -89,19 +90,19 @@ section {
 	justify-content: space-between;
 	overflow: overlay;
 	align-items: center;
-	counter-reset: count;	
+	counter-reset: count;
 }
 
-.movie-card:after {	
+.movie-card:after {
 	content: counter(count);
-    counter-increment: count;
+	counter-increment: count;
 	position: relative;
-    left: 40px;
-    bottom: -290px;
+	left: 40px;
+	bottom: -290px;
 	font-weight: 400;
-    font-size: 60px;
-    font-style: italic;
-    color: #fff;
+	font-size: 60px;
+	font-style: italic;
+	color: #fff;
 }
 
 .movie-card {
@@ -110,7 +111,7 @@ section {
 	background-color: lightgray;
 	border-radius: 15px;
 	display: flex;
-	margin-right: 25px;	
+	margin-right: 25px;
 }
 
 .shadow-box {
@@ -178,7 +179,10 @@ section {
 /****** 이벤트 배너 *********/
 .event-banner {
 	margin-top: 100px;
-	background-color: lightgray;
+/* 	background-color: rgb(90, 74, 227); */
+	background-image: url("/resources/img/event_01.jpeg");
+	background-size: 100%;
+	background-repeat: no-repeat;
 	font-family: 'Noto Sans KR', sans-serif;
 	height: 360px;
 	text-align: center;
@@ -192,27 +196,39 @@ section {
 	margin: 0 auto;
 }
 
+.event-banner-title {
+	color: #fff;
+}
+
 .event-banner-text {
 	margin-top: 25px;
 	word-break: normal;
 	line-height: 22px;
 	display: block;
-	color: #222;
+	color: #fff;
 }
 
 .event-banner-date {
 	margin-top: 35px;
+	color: #fff;
 }
 
 .event_btn {
 	width: 140px;
 	height: 40px;
 	border-radius: 30px;
-	background-color: rgb(90, 74, 227);
+	border: 1px solid white;
+	/* 	background-color: white; */
+	background: none;
 	color: white;
-	border: none;
 	cursor: pointer;
 	margin-top: 35px;
+}
+
+.event_btn:hover {
+	background-color: rgb(90, 74, 227);
+	color: white;
+	border-color: rgb(90, 74, 227);
 }
 
 /****** 소식 *********/
@@ -253,9 +269,9 @@ section {
 .notice_content {
 	display: inline-block;
 	color: white;
-	overflow: hidden;
-	text-overflow: ellipsis;
+	overflow: hidden; text-overflow : ellipsis;
 	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .notice_content:before {

@@ -10,14 +10,17 @@
 <html>
 <head>
 	<title>영화이름</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
+	<script type="text/javascript" src="/resources/js/movieDetail.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico" />
-    <link href="/resources/css/reset.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/button.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/header.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/footer.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/movieDetail.css?ver=3" rel="stylesheet" type="text/css">
+    <link href="/resources/css/reset.css?ver=3" rel="stylesheet" type="text/css">
+    <link href="/resources/css/button.css?ver=3" rel="stylesheet" type="text/css">
+    <link href="/resources/css/text.css?ver=3" rel="stylesheet" type="text/css">
+    <link href="/resources/css/logo.css?ver=3" rel="stylesheet" type="text/css">
+    <link href="/resources/css/header.css?ver=4" rel="stylesheet" type="text/css">
+    <link href="/resources/css/footer.css?ver=3" rel="stylesheet" type="text/css">
+    <link href="/resources/css/movieDetail.css?ver=5" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,12 +92,12 @@
     	<div class="main">
 			<div class="detail-top">
     			<div class="movie-poster">
-					<img src="/resources/img/moviePoster/해적.jpeg">
+					<img src="/resources/img/moviePoster/${movie.movie_title}.jpeg">
 				</div>
 				<div class="movie-info">
 					<div class="movie-info_title">
-						<span class="title-kor tit-xl">극장판 주술회전 0</span>
-						<span class="title-eng txt-md">Jujutsu Kaisen: Zero</span>
+						<span class="title-kor tit-xl">${movie.movie_title}</span>
+						<span class="title-eng txt-md">eng Title</span>
 					</div>
 					<ul class="movie-info_detail1">
 						<li class="txt-md">관람객 평점 <strong class="tit-lg">5.0</strong></li>
@@ -109,8 +112,8 @@
 				</div>
 			</div>
 			<div class="detail-bottom">
-				<button class="btn_tab txt-md" onclick="">영화정보</button>
-				<button class="btn_tab txt-md">평점 및 관람평</button>
+				<button class="btn_tab info txt-sm">영화정보</button>
+				<button class="btn_tab grade txt-sm">평점 및 관람평</button>
 				<div class="movie-tab">
 					<div class="movie-tab_info">
 						<div class="info_titile">
@@ -136,7 +139,9 @@
 								<i class="bi bi-chevron-left"></i>
 							</button>
 							<div class="trailer-box">
-								<div class="trailer-card"></div>
+								<div class="trailer-card">
+									<img src="/resources/img/moviePoster/.jpeg">
+								</div>
 								<span class="txt-sm">티저 예고편</span>
 							</div>
 							<div class="trailer-box">

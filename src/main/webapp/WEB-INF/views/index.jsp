@@ -19,7 +19,7 @@
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/button.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/header.css?ver=2" rel="stylesheet" type="text/css">
+    <link href="/resources/css/header.css?ver=5" rel="stylesheet" type="text/css">
     <link href="/resources/css/footer.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/main.css?ver=7" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -66,7 +66,7 @@
 				</ul></li>
 			<li><a href="ticketing" class="txt-md">예매</a>
 				<ul>
-					<li><a href="#" class="txt-sm">빠른예매</a></li>
+					<li><a href="ticketing" class="txt-sm">빠른예매</a></li>
 					<li><a href="#" class="txt-sm">상영시간표</a></li>
 				</ul></li>
 			<li><a href="#" class="txt-md">극장</a>
@@ -88,15 +88,17 @@
 		</ul>
 	</nav>
 
-    <section>
-    	<div class="main-banner">
-    		<div class="video-wrap">
+	<section>
+		<div class="main-banner">
+			<div class="video-wrap">
 				<video autoplay controls loop muted poster="" preload="auto">
 					<source src="/resources/img/main-video1.mp4" type="video/mp4">
 				</video>
 				<div class="main-banner_content">
 					<h1 class="main-banner_title tit-2xl">나이트메어 앨리</h1>
-					<p class="main-banner_text txt-xl">2022년 아카데미 시상식 작품상 후보! <br> 기예르모 델 토로 감독 신작!</p>
+					<p class="main-banner_text txt-xl">
+						2022년 아카데미 시상식 작품상 후보! <br> 기예르모 델 토로 감독 신작!
+					</p>
 					<div class="main-banner_btn">
 						<button class="btn_movie-detail txt-sm">상세정보</button>
 						<button class="btn_movie-ticketing txt-sm">예매하기</button>
@@ -104,7 +106,7 @@
 				</div>
 			</div>
 		</div>
-    </section>
+	</section>
 
 	<main>
 		<div class="main_movie-chart">
@@ -163,7 +165,6 @@
 	</main>
 
 	<div class="event-banner">
-<!-- 				<img src="/resources/img/banner.png"> -->
    		<div class="event-banner_inner">
    			<div class="inner_content">
    				<strong class="event-banner-title tit-xl">2022 자바멤버십 안내</strong>
