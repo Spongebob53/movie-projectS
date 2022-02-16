@@ -125,7 +125,6 @@
 								<form method="get" class="movie-card">
 									<input type="hidden" name="movie_id" value="${movie.movie_id}">
 									<img src="/resources/img/moviePoster/${movie.movie_title}.jpeg">
-<!-- 									<div class="shadow-box"></div> -->
 									<div class="movie-chart_btn">
 										<button type="submit" formaction="movieDetail"
 											class="btn_movie-detail txt-sm">상세정보</button>

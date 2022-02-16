@@ -19,6 +19,9 @@
 	border-bottom: 1px solid rgb(90, 74, 227);
 	background: none;
 	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+	color: #222;
 }
 
 .active {
@@ -32,11 +35,21 @@
 .btn_play {
 	width: 45px;
 	height: 45px;
-	background-color: white;
-	border: none;
-	border-radius: 30px;
+	border: 1px solid white;
+	background: none; border-radius : 30px;
 	cursor: pointer;
-	color: #222;
+	border-radius: 30px; cursor : pointer;
+	color: white;
+}
+
+.btn_play .bi-play-fill {
+	color: white;
+}
+.btn_play:hover {
+	background-color: white;
+}
+.btn_play:hover .bi-play-fill {
+	color: rgb(90, 74, 227);
 }
 
 .btn_arrow {
