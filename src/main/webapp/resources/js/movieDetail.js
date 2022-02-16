@@ -14,6 +14,24 @@ $(function() {
 		$('.info').removeClass('active');
 	});
 
+	// 트레일러 슬라이드
+	$('.trailer-box').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		nextArrow: $('.next'),
+		prevArrow: $('.prev'),
+	});
 
 
+});
+
+$(document).ready(function() {
+	$('.trailer-box').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		nextArrow: $('.next'),
+		prevArrow: $('.prev'),
+	});
 });
