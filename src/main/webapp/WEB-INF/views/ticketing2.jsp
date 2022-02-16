@@ -88,6 +88,9 @@
                 <ul class="theater-theaters">
                     <li class="theater-theaters_item">병점</li>
                 </ul>
+                <div class="special" style="visibility: hidden">
+                    준비중입니다
+                </div>
             </div>
         </article>
         <article class="movie-container">
