@@ -110,8 +110,9 @@ public class MainController {
     }
     
     @RequestMapping("ticketing")
-    public void ticketing(AreaVO areaVO, Model model) {
+    public void ticketing(AreaVO areaVO, Model model,MovieVO movieVO) {
     	model.addAttribute("area",theaterService.ticketing_area(areaVO));
+    	model.addAttribute("movie_title", theaterService.ticketing_movie(movieVO));
     }
     
     @ResponseBody
@@ -120,17 +121,21 @@ public class MainController {
     	System.out.println("Main 상영관 호출 : " + areaVO.getArea_id() );
 
     	List<TheaterVO> theaterVO = theaterService.ticketing_theater(areaVO);
-    		System.out.println(theaterVO);
+    	System.out.println(theaterVO);
 
 		return theaterVO;
 	}
     
+    
     @ResponseBody
-    @RequestMapping("ticketing_movie_show")
-    public void ticketing_movie_show(Model model,TheaterVO theaterVO) {
-    	System.out.println("MAIN 영화목록 호출 : " + theaterVO.getTheater_id() );
-    	model.addAttribute("movie_show",theaterService.ticketing_movie_show(theaterVO));
-	}
+    @RequestMapping("ticketing_movie_time")
+    public Object ticketing_movie_time(Movie_showVO movie_showVO) {
+    	System.out.println("Main 영화시간 호출" + movie_showVO.getMovie_id());
+    	
+    	List<Object> object = theaterService.ticketing_movie_time(movie_showVO);
+    	System.out.println(object);
+    	return object;
+    }
     
     
     
