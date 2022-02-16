@@ -110,8 +110,9 @@ public class MainController {
     }
     
     @RequestMapping("ticketing")
-    public void ticketing(AreaVO areaVO, Model model) {
+    public void ticketing(AreaVO areaVO, Model model,MovieVO movieVO) {
     	model.addAttribute("area",theaterService.ticketing_area(areaVO));
+    	model.addAttribute("movie_title", theaterService.ticketing_movie(movieVO));
     }
     
     @ResponseBody

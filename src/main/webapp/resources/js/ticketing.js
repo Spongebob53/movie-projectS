@@ -1,10 +1,12 @@
 $(function() {
 	
 	var choice = 0;
+	let area_id;
+	let theater_id;
 	// 지역선택
 	$('.area').click(function(){
-		
-		let area_id = $(this).val();
+
+		area_id = $(this).val();
 		
 		$.ajax( {
 			url : 'ticketing_theater',
@@ -13,16 +15,14 @@ $(function() {
 			dataType : 'json',
 			success : function(data) {
 				
-				var t = $('.theater'); 
+				var t = $('.theaterList'); 
 				
 				t.children('li').remove();
 				
 				for(var vo in data){
-					t.append('<li><input type="hidden" value="'+data[vo].theater_id+'" />'+ data[vo].theater_name + '</li>')
+					t.append('<li><input type="hidden" value="'+data[vo].theater_name+'" />'+  '<button class="theater" value="'+data[vo].theater_id+'">'+data[vo].theater_name+'</button></li>')
 				}
-				
 
-//				alert("성공");
 			},
 			error : function() {
 				alert("error");
@@ -32,27 +32,43 @@ $(function() {
 	
 	
 	})
+	
+	
 	// 극장선택
-	$('.theater').click(function(){
+	$(document).on("click",".theater",function(){
 		
-		let theater_id = $(this).val();
-		
-		$.ajax( {
-			url : 'ticketing_movie_title',
-			type : 'post',
-			data : {theater_id : theater_id},
-			dataType : 'text',
-			success : function(data) {
-				alert("성공");
-			},
-			error : function() {
-				alert("error");
-			}
+		$(this).each(function(){
 			
-		})
-	
-	
+			let theater_name = $(this).prev().val();
+			
+			alert(theater_name);
+			
+			var b_t = $('.book-process_theater');
+			
+			b_t.next().text(">"+theater_name);
+			
+			aaa();
+			
+		});
 	})
+	
+//			$.ajax({
+//				url: 'ticketing_movie_title',
+//				type: 'post',
+//				data: { theater_id: theater_id },
+//				dataType: 'text',
+//				success: function(data) {
+//					alert("성공");
+//				},
+//				error: function() {
+//					alert("error");
+//				}
+//	
+//			})
+//		
+//			})
+//	
+//	})
 	// 영화선택
 	$('.movie_title').click(function(){
 		
@@ -74,5 +90,9 @@ $(function() {
 	
 	
 	})
+	
+	function aaa() {
+		alert("123");
+	}
 	
 })

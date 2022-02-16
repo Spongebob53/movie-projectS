@@ -5,7 +5,7 @@
 <mapper namespace="theater">
     <!--영화 전체 불러오기-->
     <select id="ticketing_movie" resultType="movie">
-        SELECT *
+        SELECT movie_id,movie_title
         FROM movie
     </select>
     <!-- 지역 전체 불러오기 -->
