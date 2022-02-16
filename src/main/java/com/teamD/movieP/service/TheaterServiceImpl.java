@@ -31,7 +31,7 @@ public class TheaterServiceImpl implements TheaterService{
 	}
 
 	@Override
-	public List<Movie_showVO> ticketing_movie_show(Movie_showVO movie_showVO) {
-		return theaterDAO.ticketing_movie_show(movie_showVO);
+	public List<Movie_showVO> ticketing_movie_show(TheaterVO theaterVO) {
+		return theaterDAO.ticketing_movie_show(theaterVO);
 	}
 }

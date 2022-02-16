@@ -21,6 +21,7 @@ import com.teamD.movieP.service.TheaterService;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 @Controller
 public class MainController {
@@ -115,9 +116,20 @@ public class MainController {
     
     @ResponseBody
     @RequestMapping("ticketing_theater")
-    public void ticketing_theater(Model model,AreaVO areaVO) {
-    	System.out.println("아리아 : " + areaVO.getArea_id() );
-    	model.addAttribute("theater",theaterService.ticketing_theater(areaVO));
+    public Object ticketing_theater(AreaVO areaVO, Model model) {
+    	System.out.println("Main 상영관 호출 : " + areaVO.getArea_id() );
+
+    	List<TheaterVO> theaterVO = theaterService.ticketing_theater(areaVO);
+    		System.out.println(theaterVO);
+
+		return theaterVO;
+	}
+    
+    @ResponseBody
+    @RequestMapping("ticketing_movie_show")
+    public void ticketing_movie_show(Model model,TheaterVO theaterVO) {
+    	System.out.println("MAIN 영화목록 호출 : " + theaterVO.getTheater_id() );
+    	model.addAttribute("movie_show",theaterService.ticketing_movie_show(theaterVO));
 	}
     
     
