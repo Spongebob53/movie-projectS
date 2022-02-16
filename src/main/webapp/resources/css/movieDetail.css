@@ -2,6 +2,7 @@
 *********** 배너 영역 **********/
 
 section {
+	margin-top: 122px;
 	height: 300px;
 	font-family: 'Noto Sans KR', sans-serif;
 	background-color: gray;
@@ -93,9 +94,17 @@ section {
 	width: 49%;
 	height: 50px;
 	border: none;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid rgb(90, 74, 227);
 	background: none;
 	cursor: pointer;
+}
+
+.active {
+	border-radius: 15px 15px 0 0;
+	background-color: rgb(90, 74, 227);
+	color: white;
+	font-weight: 500;
+	font-size: 16px;
 }
 
 .movie-tab_info {
