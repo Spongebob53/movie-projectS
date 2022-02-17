@@ -17,11 +17,11 @@
     
     <link href="/resources/css/reset.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/button.css?ver=6" rel="stylesheet" type="text/css">
+    <link href="/resources/css/button.css?ver=5" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/header.css?ver=6" rel="stylesheet" type="text/css">
+    <link href="/resources/css/header.css?ver=7" rel="stylesheet" type="text/css">
     <link href="/resources/css/footer.css?ver=5" rel="stylesheet" type="text/css">
-    <link href="/resources/css/main.css?ver=3" rel="stylesheet" type="text/css">
+    <link href="/resources/css/main.css?ver=4" rel="stylesheet" type="text/css">
     
     <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -90,17 +90,16 @@
 		</ul>
 	</nav>
 
-
 	<section class="main-banner">
 		<div class="main-banner_in">
 			<div class="video-wrap">
 				<video autoplay controls loop muted poster="" preload="auto">
-					<source src="/resources/img/main-video1.mp4" type="video/mp4">
+					<source src="/resources/img/video/000008.mp4" type="video/mp4">
 				</video>
 				<div class="main-banner_content">
-					<h1 class="main-banner_title tit-2xl">나이트메어 앨리</h1>
+					<h1 class="main-banner_title tit-2xl">언차티드</h1>
 					<p class="main-banner_text txt-xl">
-						2022년 아카데미 시상식 작품상 후보! <br> 기예르모 델 토로 감독 신작!
+						&lt;스파이더맨&gt; 톰 홀랜드 <br> 액션 어드벤처의 세대교체!
 					</p>
 					<div class="main-banner_btn">
 						<button class="btn_movie-detail">상세정보</button>
