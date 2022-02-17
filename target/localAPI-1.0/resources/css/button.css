@@ -12,6 +12,46 @@
 	font-weight: 400;
 }
 
+.btn_tab {
+	width: 49%;
+	height: 50px;
+	border: none;
+	border-bottom: 1px solid rgb(90, 74, 227);
+	background: none;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+	color: #222;
+}
+
+.active {
+	border-radius: 15px 15px 0 0;
+	background-color: rgb(90, 74, 227);
+	color: white;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.btn_play {
+	width: 45px;
+	height: 45px;
+	border: 1px solid white;
+	background: none; border-radius : 30px;
+	cursor: pointer;
+	border-radius: 30px; cursor : pointer;
+	color: white;
+}
+
+.btn_play .bi-play-fill {
+	color: white;
+}
+.btn_play:hover {
+	background-color: white;
+}
+.btn_play:hover .bi-play-fill {
+	color: rgb(90, 74, 227);
+}
+
 .btn_arrow {
 	width: 45px;
 	height: 45px;
@@ -23,7 +63,7 @@
 }
 
 .btn_arrow:hover {
-	box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 20%);
+	box-shadow: 2px 2px 8px 0 rgb(0 0 0/ 20%);
 }
 
 .btn_movie-detail {

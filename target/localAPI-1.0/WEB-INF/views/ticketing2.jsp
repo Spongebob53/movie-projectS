@@ -11,9 +11,9 @@
     <link href="/resources/css/button.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=3" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=3" rel="stylesheet" type="text/css">
-    <link href="/resources/css/header.css?ver=3" rel="stylesheet" type="text/css">
+    <link href="/resources/css/header.css?ver=5" rel="stylesheet" type="text/css">
     <link href="/resources/css/footer.css?ver=4" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/resources/css/ticketing.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/ticketing.css?ver=2" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,54 +21,57 @@
           rel="stylesheet">
 </head>
 <body>
-<header>
-    <div class="header">
+<header class="header">
+    <div class="head">
         <div class="header-search">
-            <a href="#"><i class="bi bi-search"></i></a>
+            <a href="#" ><i class="bi bi-search"></i></a>
         </div>
         <div class="header-logo">
-            <a href="/"><img src="/resources/img/logo/textLogo-color.png" class="logo-medium"></a>
+            <a href="introduce" data-transition="slideup"><img src="/resources/img/logo/textLogo-color.png" class="logo-medium"></a>
         </div>
         <div class="header-member">
-            <a href="#" class="txt-xs">${sessionScope.customer_id}님 반갑습니다</a>
-            <a href="logout" class="txt-xs">로그아웃</a>
+            <c:choose>
+                <c:when test="${sessionScope.customer_id == null}">
+                    <a href="login" class=txt-xs>로그인</a>
+                    <a href="join" class="txt-xs">회원가입</a>
+                </c:when>
+                <c:when test="${sessionScope.customer_id != null}">
+                    <a href="#" class="txt-xs">${sessionScope.customer_id}님 반갑습니다</a>
+                    <a href="logout" class="txt-xs">로그아웃</a>
+                </c:when>
+            </c:choose>
             <a href="#" class="txt-xs">고객센터</a>
         </div>
     </div>
 </header>
-<nav>
+<nav class="navigation">
     <ul class="nav">
         <li><a href="#" class="txt-md">영화</a>
             <ul>
                 <li><a href="#" class="txt-sm">현재상영작</a></li>
                 <li><a href="#" class="txt-sm">상영예정작</a></li>
-            </ul>
-        </li>
+            </ul></li>
         <li><a href="ticketing" class="txt-md">예매</a>
             <ul>
-                <li><a href="#" class="txt-sm">빠른예매</a></li>
+                <li><a href="ticketing" class="txt-sm">빠른예매</a></li>
                 <li><a href="#" class="txt-sm">상영시간표</a></li>
-            </ul>
-        </li>
+            </ul></li>
         <li><a href="#" class="txt-md">극장</a>
             <ul>
                 <li><a href="#" class="txt-sm">전체극장</a></li>
                 <li><a href="#" class="txt-sm">특별관</a></li>
-            </ul>
-        </li>
+            </ul></li>
         <li><a href="#" class="txt-md">이벤트</a>
             <ul>
                 <li><a href="#" class="txt-sm">영화/예매</a></li>
                 <li><a href="#" class="txt-sm">당첨자발표</a></li>
                 <li><a href="#" class="txt-sm">종료 이벤트</a></li>
-            </ul>
-        </li>
+            </ul></li>
         <li><a href="#" class="txt-md">혜택</a>
             <ul>
                 <li><a href="#" class="txt-sm">멤버십/CLUB</a></li>
                 <li><a href="#" class="txt-sm">제휴할인</a></li>
-            </ul>
-        </li>
+            </ul></li>
     </ul>
 </nav>
 <main>

@@ -5,7 +5,7 @@
 <mapper namespace="theater">
     <!--영화 전체 불러오기-->
     <select id="ticketing_movie" resultType="movie">
-        SELECT *
+        SELECT movie_id,movie_title
         FROM movie
     </select>
     <!-- 지역 전체 불러오기 -->
@@ -17,12 +17,13 @@
     <select id="ticketing_theater" parameterType="theaterArea" resultType="theater">
         SELECT *
         FROM theater
-        WHERE theater_id LIKE #{area_id}
+        WHERE theater_id LIKE '${area_id}%'
     </select>
     
-    <select id="ticketing_movie_show" resultType="theaterShow">
-        SELECT *
-        FROM movie_show
+    <select id="ticketing_movie_time" parameterType="theaterShow" resultType="theaterShow">
+       SELECT movie_show_id, show_start, room_name, room_seat,movie_title
+       FROM movie_show NATURAL JOIN room NATURAL JOIN movie
+       WHERE movie_id = '${movie_id}' AND room_id LIKE '${theater_id}%'
     </select>
 
 </mapper>

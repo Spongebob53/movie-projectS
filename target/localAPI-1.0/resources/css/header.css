@@ -1,15 +1,21 @@
 /*****************************
 *********** 헤더 영역 **********/
-header {
+.header {
 	border-bottom: 1px solid #ddd;
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 80px;
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	z-index: 200;
+	background-color: white;
 }
 
-.header {
+.head {
 	overflow: auto;
 	width: 1200px;
 }
@@ -39,12 +45,18 @@ header {
 
 /*****************************
 *********** 네비 영역 **********/
-nav {
+.navigation {
 	border-bottom: 1px solid rgb(90, 74, 227);
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: fixed;
+	top:81px;
+	left: 0;
+	right: 0;
+	z-index: 200;
+	background-color: white;
 }
 
 .nav {
