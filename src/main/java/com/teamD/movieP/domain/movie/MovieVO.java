@@ -9,4 +9,5 @@ public class MovieVO {
     private int movie_time;
     private int movie_age;
     private String movie_gerne;
+    private String movie_director;
 }

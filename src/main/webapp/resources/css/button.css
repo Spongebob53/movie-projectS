@@ -1,15 +1,57 @@
 /*****************************
 *********** 버튼 **********/
+/* beta 버튼 */
+.btn_beta {
+	width: 100px;
+	height: 40px;
+	border-radius: 30px;
+	border: 1px solid rgb(90, 74, 227);
+	background-color: white;
+	color: rgb(90, 74, 227);
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.btn_beta:hover {
+	background-color: rgb(90, 74, 227);
+	color: white;
+}
+
+/* 검색 버튼 */
+.btn_search {
+	width: 35px;
+	height: 35px;
+	border-radius: 30px;
+	background-color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.btn_search:hover {
+	box-shadow: 2px 2px 8px 0 rgb(90 74 227/ 50%);
+}
+
+.btn_search:hover .btn_search .bi {
+	color: white;
+}
+
+.btn_search .bi {
+	color: rgb(90, 74, 227);
+	font-size: 16px;
+}
+
+/* 더보기 버튼 */
 .btn_add-more {
 	width: 60px;
 	height: 30px;
 	border-radius: 30px;
-	border: 1px solid #dddddd;
+	border: 1px solid rgb(90, 74, 227);
 	background: none;
-	float: right;
 	cursor: pointer;
 	font-size: 12px;
 	font-weight: 400;
+	color: rgb(90, 74, 227);
 }
 
 .btn_tab {
@@ -32,26 +74,32 @@
 	font-size: 16px;
 }
 
+/* 재생 버튼 */
 .btn_play {
 	width: 45px;
 	height: 45px;
 	border: 1px solid white;
-	background: none; border-radius : 30px;
+	background: none;
+	border-radius: 30px;
 	cursor: pointer;
-	border-radius: 30px; cursor : pointer;
+	border-radius: 30px;
+	cursor: pointer;
 	color: white;
 }
 
 .btn_play .bi-play-fill {
 	color: white;
 }
+
 .btn_play:hover {
 	background-color: white;
 }
+
 .btn_play:hover .bi-play-fill {
 	color: rgb(90, 74, 227);
 }
 
+/* 화살표 버튼 */
 .btn_arrow {
 	width: 45px;
 	height: 45px;
@@ -59,13 +107,18 @@
 	border: none;
 	border-radius: 30px;
 	cursor: pointer;
-	color: #222;
+}
+
+.btn_arrow .bi {
+	color: rgb(90, 74, 227);
+	font-size: 20px;
 }
 
 .btn_arrow:hover {
-	box-shadow: 2px 2px 8px 0 rgb(0 0 0/ 20%);
+	box-shadow: 2px 2px 8px 0 rgb(90 74 227/ 50%);
 }
 
+/* 상세정보 버튼 */
 .btn_movie-detail {
 	width: 100px;
 	height: 40px;
@@ -82,6 +135,7 @@
 	background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* 예매하기 버튼 */
 .btn_movie-ticketing {
 	width: 100px;
 	height: 40px;
@@ -95,18 +149,27 @@
 }
 
 .btn_movie-ticketing:hover {
-	background-color: rgba(90, 74, 227, 0.8);
+	background-color: white;
+	color: rgb(90, 74, 227);
+	border: 1px solid rgb(90, 74, 227);
 }
 
+/* 이벤트 바로가기 버튼 */
 .btn_event {
 	width: 140px;
 	height: 40px;
 	border-radius: 30px;
-	background-color: rgb(90, 74, 227);
+	border: 1px solid white;
+	background: none;
 	color: white;
-	border: none;
 	cursor: pointer;
 	margin-top: 35px;
 	font-size: 14px;
 	font-weight: 400;
+}
+
+.btn_event:hover {
+	background-color: rgb(90, 74, 227);
+	color: white;
+	border-color: rgb(90, 74, 227);
 }
