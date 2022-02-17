@@ -118,7 +118,6 @@ public class MainController {
     @ResponseBody
     @RequestMapping("ticketing_theater")
     public Object ticketing_theater(AreaVO areaVO, Model model) {
-    	System.out.println("Main 상영관 호출 : " + areaVO.getArea_id() );
 
     	List<TheaterVO> theaterVO = theaterService.ticketing_theater(areaVO);
     	System.out.println(theaterVO);
@@ -130,10 +129,9 @@ public class MainController {
     @ResponseBody
     @RequestMapping("ticketing_movie_time")
     public Object ticketing_movie_time(Movie_showVO movie_showVO) {
-    	System.out.println("Main 영화시간 호출" + movie_showVO.getMovie_id());
     	
     	List<Object> object = theaterService.ticketing_movie_time(movie_showVO);
-    	System.out.println(object);
+  
     	return object;
     }
     

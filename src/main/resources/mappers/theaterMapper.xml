@@ -3,27 +3,27 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="theater">
-    <!--영화 전체 불러오기-->
+    <!--영화 정보 불러오기-->
     <select id="ticketing_movie" resultType="movie">
         SELECT movie_id,movie_title
         FROM movie
     </select>
-    <!-- 지역 전체 불러오기 -->
+    <!-- 지역 정보 불러오기 -->
     <select id="ticketing_area" resultType="theaterArea">
         SELECT *
         FROM area
     </select>
-    <!-- 극장 불러오기 -->
+    <!-- 극장 정보 불러오기 -->
     <select id="ticketing_theater" parameterType="theaterArea" resultType="theater">
         SELECT *
         FROM theater
-        WHERE theater_id LIKE '${area_id}%'
+        WHERE theater_id LIKE '0${area_id}%'
     </select>
-    
+    <!-- 상영 정보 불러오기 -->
     <select id="ticketing_movie_time" parameterType="theaterShow" resultType="theaterShow">
-       SELECT movie_show_id, show_start, room_name, room_seat,movie_title
+       SELECT movie_show_id, to_char(show_start, 'HH24:MI') AS show_start, room_name, room_seat,movie_title
        FROM movie_show NATURAL JOIN room NATURAL JOIN movie
-       WHERE movie_id = '${movie_id}' AND room_id LIKE '${theater_id}%'
+       WHERE movie_id = '00000${movie_id}' AND room_id LIKE '0${theater_id}%'
     </select>
 
 </mapper>
