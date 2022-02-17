@@ -27,13 +27,11 @@ public class TheaterDAOImpl implements TheaterDAO{
 
 	@Override
 	public List<TheaterVO> ticketing_theater(AreaVO areaVO) {
-		System.out.println("DAO호출" + areaVO.getArea_id());
 		return mybatis.selectList("theater.ticketing_theater", areaVO);
 	}
 
 	@Override
 	public List<Object> ticketing_movie_time(Movie_showVO movie_showVO) {
-		System.out.println("DAO 영화시간 호출" + movie_showVO.getMovie_id());
 		return mybatis.selectList("theater.ticketing_movie_time", movie_showVO);
 	}
 }
