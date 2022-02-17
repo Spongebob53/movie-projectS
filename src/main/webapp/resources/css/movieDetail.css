@@ -94,7 +94,12 @@
 	position: absolute;
 	right: 0;
 }
-.movie-info button~button {
+
+.movie-info button:hover {
+	border: 1px solid rgb(90, 74, 227);
+}
+
+.movie-info button ~button {
 	position: absolute;
 	top: 50px;
 	right: 0;
@@ -113,7 +118,7 @@
 
 .movie-info_detail1 li:after {
 	content: '';
-	margin: 0 20px;
+	margin: 0 10px;
 }
 
 .movie-info_detail2 {
@@ -161,7 +166,6 @@
 
 .trailer-slide_box {
 	width: 940px;
-	height: 230px;
 	display: flex;
 	justify-content: space-between;
 	overflow: overlay;
@@ -173,9 +177,11 @@
 	height: 200px;
 	border-radius: 15px;
 	display: flex;
+	cursor: pointer;
 }
 
 .trailer-card img {
+	width: 100%;
 	height: 100%;
 	border-radius: 15px;
 }
@@ -257,7 +263,7 @@
 	width: 100%;
 	height: 100%;
 	border-radius: 15px;
-	opacity: 0.5;
+	opacity: 0.75;
 }
 
 .thumb-list-box .slick-list {

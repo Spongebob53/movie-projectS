@@ -18,12 +18,12 @@
 	<link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico" />
    
     <link href="/resources/css/reset.css?ver=3" rel="stylesheet" type="text/css">
-    <link href="/resources/css/button.css?ver=6" rel="stylesheet" type="text/css">
+    <link href="/resources/css/button.css?ver=5" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=3" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=3" rel="stylesheet" type="text/css">
-    <link href="/resources/css/header.css?ver=4" rel="stylesheet" type="text/css">
+    <link href="/resources/css/header.css?ver=3" rel="stylesheet" type="text/css">
     <link href="/resources/css/footer.css?ver=3" rel="stylesheet" type="text/css">
-    <link href="/resources/css/movieDetail.css?ver=6" rel="stylesheet" type="text/css">
+    <link href="/resources/css/movieDetail.css?ver=5" rel="stylesheet" type="text/css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,7 @@
 				<button class="btn_search"><i class="bi bi-search"></i></button>
 			</div>
             <div class="header-logo">
-				<a href="index" data-transition="slideup"><img src="/resources/img/logo/textLogo-color.png" class="logo-medium"></a>
+				<a href="/" data-transition="slideup"><img src="/resources/img/logo/textLogo-color.png" class="logo-medium"></a>
 			</div>
             <div class="header-member">
 				<c:choose>
@@ -89,10 +89,9 @@
     
     <section class="movie-detail_banner">
 		<div class="banner-slide">
-			<img src="/resources/img/trailer/trailer_01.jpeg"> 
-			<img src="/resources/img/trailer/trailer_02.jpeg"> 
-			<img src="/resources/img/trailer/trailer_03.jpeg"> 
-			<img src="/resources/img/trailer/trailer_04.jpeg">
+			<c:forEach var="cnt" begin="1" end="8">
+				<img src="/resources/img/still-cut/${movie.movie_id}/${movie.movie_id}_${cnt}.jpeg">
+			</c:forEach>
 		</div>
 	</section>
     
@@ -106,11 +105,12 @@
 				<div class="movie-info">
 					<div class="movie-info_title">
 						<span class="tit-xl">${movie.movie_title}</span>
-						<span class="txt-md">eng Title</span>
+						<span class="txt-md">${movie.movie_eng_title}</span>
 					</div>
 					<ul class="movie-info_detail1">
 						<li class="txt-md">관람객 평점 <strong class="tit-lg">8.6</strong></li>
-						<li class="txt-md">예매율 <strong class="tit-lg">10%</strong></li>
+						<li class="txt-md">예매율 <strong class="tit-lg">12.4%</strong></li>
+						<li class="txt-md">누적관객수 <strong class="tit-lg">1,234,567명</strong></li>
 					</ul>
 					<ul class="movie-info_detail2">
 						<li class="tit-xs">장르 <strong class="txt-sm">${movie.movie_gerne} / ${movie.movie_age}세, ${movie.movie_time}분</strong></li>
@@ -161,16 +161,12 @@
 									<div class="trailer-list-box">
 										<input type="hidden" name="movie_id" value="${movie.movie_id}">
 										<div class="trailer-card">
-											<img
-												src="/resources/img/trailer/${movie.movie_id}/${movie.movie_id}_${cnt}.jpeg">
+											<img src="/resources/img/trailer/${movie.movie_id}/${movie.movie_id}_${cnt}.jpeg">
 											<div class="trailer_btn">
 												<button class="btn_play">
 													<i class="bi bi-play-fill"></i>
 												</button>
 											</div>
-										</div>
-										<div class="trailer-info">
-											<span class="txt-sm">티저 예고편</span>
 										</div>
 									</div>
 								</c:forEach>
@@ -191,18 +187,11 @@
 						<div class="still-cut-slide">
 							<div class="still-cut_view-slide_box">
 								<div class="view-list-box">
-									<div class="view-card">
-										<img src="/resources/img/trailer/trailer_01.jpeg">
-									</div>
-									<div class="view-card">
-										<img src="/resources/img/trailer/trailer_02.jpeg">
-									</div>
-									<div class="view-card">
-										<img src="/resources/img/trailer/trailer_03.jpeg">
-									</div>
-									<div class="view-card">
-										<img src="/resources/img/trailer/trailer_04.jpeg">
-									</div>
+									<c:forEach var="cnt" begin="1" end="8">
+										<div class="view-card">
+											<img src="/resources/img/still-cut/${movie.movie_id}/${movie.movie_id}_${cnt}.jpeg">
+										</div>
+									</c:forEach>
 								</div>
 							</div>
 							<div class="still-cut_btn">
@@ -217,8 +206,7 @@
 								<div class="thumb-list-box">
 									<c:forEach var="cnt" begin="1" end="8">
 										<div class="thumb-card">
-											<img
-												src="/resources/img/still-cut/${movie.movie_id}/${movie.movie_id}_${cnt}.jpeg">
+											<img src="/resources/img/still-cut/${movie.movie_id}/${movie.movie_id}_${cnt}.jpeg">
 										</div>
 									</c:forEach>
 								</div>

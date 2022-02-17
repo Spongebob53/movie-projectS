@@ -29,12 +29,12 @@
 	left: 0;
 	top: 0;
 	background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.25)
-		25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 75%, #000 100%);
+		20%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 70%, #000 100%);
 	z-index: 1;
 }
 
 .video-wrap video {
-	transform: scale(1.15);
+	transform: scale(1.5);
 }
 
 .main-banner_content {
@@ -85,7 +85,7 @@
 	justify-content: space-around;
 	align-items: center;
 	overflow: hidden;
-	position: relative;	
+	position: relative;
 }
 
 .movie-chart_slide {
@@ -96,16 +96,15 @@
 	justify-content: space-between;
 	overflow: overlay;
 	align-items: center;
-	
 }
 
 .slick-list .slick-track {
 	counter-reset: movie-chart-counter -4;
 }
 
-.movie-card:after{
+.movie-card:after {
 	content: counter(movie-chart-counter);
-    counter-increment: movie-chart-counter;
+	counter-increment: movie-chart-counter;
 	position: relative;
 	left: 20px;
 	top: -65px;
