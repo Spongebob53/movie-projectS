@@ -1,6 +1,6 @@
 /*****************************
 *********** 메인 배너 **********/
-section {
+.main-banner {
 	margin-top: 122px;
 	background-color: #000;
 	height: 500px;
@@ -10,7 +10,7 @@ section {
 	justify-content: center;
 }
 
-.main-banner {
+.main-banner_in {
 	width: 1200px;
 }
 
@@ -55,7 +55,6 @@ section {
 	line-height: 25px;
 }
 
-/*********** 메인 배너 버튼 **********/
 .main-banner_btn {
 	display: flex;
 	margin-top: 30px;
@@ -63,26 +62,33 @@ section {
 }
 
 /*****************************
-*********** 메인 배너 **********/
-.title {
-	display: inline-block;
+*********** 영화 순위 **********/
+.movie-chart {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.main_movie-chart {
-	margin: 100px auto 0;
+.movie-chart_in {
 	width: 1200px;
+	margin-top: 100px;
 }
 
-.slide {
+.movie-chart_titile {
+	display: flex;
+	justify-content: space-between;
+}
+
+.movie-chart_content {
 	width: 1200px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	overflow: hidden;
-	position: relative;
+	position: relative;	
 }
 
-.movie-chart_content {
+.movie-chart_slide {
 	width: 1040px;
 	margin-top: 30px;
 	height: 430px;
@@ -90,35 +96,30 @@ section {
 	justify-content: space-between;
 	overflow: overlay;
 	align-items: center;
-	counter-reset: count;
+	
 }
 
-.movie-card:after {
-	content: counter(count);
-	counter-increment: count;
+.slick-list .slick-track {
+	counter-reset: movie-chart-counter -4;
+}
+
+.movie-card:after{
+	content: counter(movie-chart-counter);
+    counter-increment: movie-chart-counter;
 	position: relative;
-	left: 40px;
-	bottom: -290px;
+	left: 20px;
+	top: -65px;
 	font-weight: 400;
 	font-size: 60px;
 	font-style: italic;
 	color: #fff;
+	font-weight: 400;
 }
 
 .movie-card {
 	width: 240px;
 	height: 360px;
-	background-color: lightgray;
 	border-radius: 15px;
-	display: flex;
-}
-
-.shadow-box {
-	width: 240px;
-	height: 360px;
-	border-radius: 15px;
-	display: none;
-	position: absolute;
 }
 
 .movie-card img {
@@ -133,11 +134,6 @@ section {
 	display: flex;
 }
 
-.movie-card:hover .shadow-box {
-	background-color: rgba(0, 0, 0, 0.6);
-	display: inline-block;
-}
-
 .movie-chart_btn {
 	width: 240px;
 	height: 360px;
@@ -145,9 +141,12 @@ section {
 	border-radius: 15px;
 	display: none;
 	position: absolute;
+	top: 0;
 	flex-direction: column;
+	align-content: center;
+	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+	z-index: 3;
 }
 
 .movie-chart_btn button ~button {
@@ -175,32 +174,29 @@ section {
 	margin: 0 10px;
 }
 
-/****** 이벤트 배너 *********/
+/*****************************
+*********** 이벤트 배너 **********/
 .event-banner {
-	margin-top: 100px;
-/* 	background-color: rgb(90, 74, 227); */
 	background-image: url("/resources/img/event_01.jpeg");
 	background-size: 100%;
-	background-repeat: no-repeat;
-	font-family: 'Noto Sans KR', sans-serif;
 	height: 360px;
+	margin-top: 100px;
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.event-banner_inner {
+.event-banner_in {
 	width: 1200px;
-	margin: 0 auto;
 }
 
-.event-banner-title {
+.event-banner_content .title {
 	color: #fff;
 }
 
 .event-banner-text {
-	margin-top: 25px;
+	margin-top: 30px;
 	word-break: normal;
 	line-height: 22px;
 	display: block;
@@ -209,101 +205,89 @@ section {
 
 .event-banner-date {
 	margin-top: 35px;
-	color: #fff;
+	color: #ddd;
 }
 
-.event_btn {
-	width: 140px;
-	height: 40px;
-	border-radius: 30px;
-	border: 1px solid white;
-	/* 	background-color: white; */
-	background: none;
-	color: white;
-	cursor: pointer;
-	margin-top: 35px;
+/*****************************
+*********** 소식 **********/
+.news {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.event_btn:hover {
-	background-color: rgb(90, 74, 227);
-	color: white;
-	border-color: rgb(90, 74, 227);
-}
-
-/****** 소식 *********/
-.main_news {
-	margin-top: 100px;
-	/* 	padding: 0 300px; */
-}
-
-.news_inner {
-	margin: 0 auto;
+.news_in {
 	width: 1200px;
+	margin-top: 100px;
+}
+
+.news_title {
+	display: flex;
+	justify-content: space-between;
 }
 
 .news_content {
 	margin-top: 30px;
 	cursor: pointer;
-	overflow: auto;
+	display: flex;
+	justify-content: space-between;
 }
 
-.content_notice {
-	float: left;
-	width: 480px;
+.news-content_box {
+	width: 500px;
 	height: 60px;
-	border-radius: 14px;
-	background-color: rgb(90, 74, 227);
-	border: 1px solid rgb(90, 74, 227);
+	border-radius: 15px;
 	padding: 0 25px;
 	display: flex;
 	justify-content: space-between;
 }
 
-.notice_title {
+/****** 공지사항 *******/
+.notice {
+	background-color: rgb(90, 74, 227);
+	border: 1px solid rgb(90, 74, 227);
+}
+
+.notice .title {
 	display: inline-block;
 	margin-top: 20px;
 	color: white;
-}
-
-.notice_content {
-	display: inline-block;
-	color: white;
-	overflow: hidden; text-overflow : ellipsis;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-
-.notice_content:before {
-	content: ' ';
-	margin: 0 20px;
 }
 
 .notice-wrapper {
-	width: 400px;
+	width: 380px;
 	margin-top: 20px;
 }
 
-.content_center {
-	float: right;
-	width: 480px;
-	height: 60px;
-	border-radius: 14px;
+.notice_text {
+	color: white;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/****** 고객센터 *******/
+.center {
 	border: 1px solid rgb(90, 74, 227);
-	padding: 0 25px;
 }
 
-.center_title {
+.center .title {
 	display: inline-block;
 	margin-top: 20px;
 	color: rgb(90, 74, 227);
 }
 
-._content {
-	display: inline-block;
-	color: rgb(90, 74, 227);
+.center-wrapper {
+	width: 380px;
+	margin-top: 20px;
 }
 
-.center_content:before {
-	content: ' ';
-	margin: 0 30px;
+.center_text {
+	color: rgb(90, 74, 227);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.center_text:after {
+	content: '';
+	padding-right: 20px;
 }

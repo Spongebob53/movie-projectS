@@ -8,7 +8,7 @@
 	justify-content: center;
 	height: 80px;
 	position: fixed;
-	top:0;
+	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 200;
@@ -16,43 +16,47 @@
 }
 
 .head {
-	overflow: auto;
 	width: 1200px;
-}
-
-.header-search {
-	float: left;
-	margin-top: 15px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .header-logo {
-	float: left;
-	margin-left: 430px;
+	margin-left: 190px;
 }
 
 .header-member {
-	float: right;
-	margin-top: 15px;
+	width: 280px;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .header-member a {
-	padding: 8px;
+	padding: 8px 13px;
 }
 
 .header-member a:hover {
 	color: rgb(90, 74, 227);
+	font-weight: 700;
+}
+
+.welcome-text {
+	color: rgb(90, 74, 227);
+	font-weight: 700;
 }
 
 /*****************************
 *********** 네비 영역 **********/
 .navigation {
-	border-bottom: 1px solid rgb(90, 74, 227);
+	border-bottom: 2px solid rgb(90, 74, 227);
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	position: fixed;
-	top:81px;
+	top: 81px;
 	left: 0;
 	right: 0;
 	z-index: 200;
@@ -61,7 +65,7 @@
 
 .nav {
 	width: 1200px;
-	height: 40px;
+	height: 50px;
 	z-index: 100;
 }
 
@@ -76,9 +80,9 @@
 
 .nav li a {
 	display: block;
-	line-height: 40px;
-	padding: 0px 25px;
+	line-height: 50px;
 	text-align: center;
+	color: #222;
 }
 
 .nav li:hover .txt-md, .nav ul li:hover a {
@@ -89,7 +93,7 @@
 .nav li ul {
 	background-color: white;
 	display: none;
-	border-top: 1px solid rgb(90, 74, 227);
+	border-top: 2px solid rgb(90, 74, 227);
 	width: 240px;
 }
 
@@ -97,14 +101,10 @@
 	display: block;
 }
 
-.nav li ul a:hover, .nav li ul li:hover a {
-	background-color: rgb(90, 74, 227);
-	color: white;
+.nav li ul a:hover, .nav li ul li:hover a:after {
+	font-size: 16px;
+	content: '•';
+	margin-left: 10px;
 }
 
-.bi {
-	font-size: 16px;
-	padding: 5px;
-	color: #666;
-	border-radius: 15px;
-}
+/*******************************/
