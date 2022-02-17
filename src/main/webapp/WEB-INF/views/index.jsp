@@ -21,7 +21,7 @@
     <link href="/resources/css/logo.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/header.css?ver=5" rel="stylesheet" type="text/css">
     <link href="/resources/css/footer.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/main.css?ver=7" rel="stylesheet" type="text/css">
+    <link href="/resources/css/main.css?ver=8" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

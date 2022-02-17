@@ -116,6 +116,7 @@
 						<li class="txt-sm">출연 <strong class="txt-sm">오가타 메구미, 하나자와 카나, 코마츠 미카코, 우치야마 코우키, 세키 토모카즈, 나카무라 유이치, 사쿠라이 타카히로</strong></li>
 					</ul>
 					<button class="btn_movie-ticketing">예매하기</button>
+					<a href="movieBeta" class="btn_movie-ticketing">Beta</a>
 				</div>
 			</div>
 			

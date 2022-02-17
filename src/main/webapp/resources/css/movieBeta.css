@@ -1,0 +1,30 @@
+body {
+    background-image: url("/resources/img/movieBeta/DuneBg.jpg");
+    text-align: center;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.collage_container {
+    display: inline-block;
+    width: 1200px;
+    height: 800px;
+    position: relative;
+    margin-top: 100px;
+}
+
+.collage_piece {
+    overflow: hidden;
+    position: absolute;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+.vol1 {
+    color: grey;
+    display: inline-block;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    text-decoration: none;
+}
