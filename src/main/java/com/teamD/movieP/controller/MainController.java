@@ -135,6 +135,13 @@ public class MainController {
     	return object;
     }
     
+    @ResponseBody
+    @RequestMapping("book_seat")
+    public void book_seat(BookVO bookVO) {
+    	theaterService.book_seat(bookVO);
+    	
+    }
+    
     
     
 }

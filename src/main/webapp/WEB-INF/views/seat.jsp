@@ -12,7 +12,7 @@
 <% String movie_show_id = request.getParameter("movie_show_id"); %>
 <html>
 <head>
-    <title>Insert title here</title>
+    <title>좌석</title>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico"/>
     <link href="/resources/css/reset.css?ver=2" rel="stylesheet" type="text/css">
@@ -110,10 +110,11 @@
             <div class="seats-info_disabled">예매완료</div>
             <div class="seats-info_pick">선택</div>
         </aside>
-        <form class="seat-submit" action="ticketing">
+        <form class="seat-submit" action="/">
 <!--             <button class="seat-submit_btn" type="submit">뒤로가기</button> -->
 <%--             <input type="hidden" value="<%=movie_show_id%>"> --%>
             <button class="seat-submit_btn" value="<%=movie_show_id%>" type="submit">예매하기</button>
+            <input type="hidden" value="${sessionScope.customer_id}">
         </form>
     </section>
 </main>
