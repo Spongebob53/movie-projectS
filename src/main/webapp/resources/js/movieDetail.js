@@ -54,10 +54,7 @@ $(function() {
 		asNavFor: '.view-list-box',
 	});
 
-});
-
-// 스크롤시 고정 네비게이션 나타내기
-$(document).ready(function() {
+	// 스크롤시 고정 네비게이션 나타내기
 	$(window).scroll(function() {
 		var scroll = $(window).scrollTop();
 		if (scroll > 50) {
@@ -66,5 +63,6 @@ $(document).ready(function() {
 		else {
 			$('.fix-navigation').css('display', 'none');
 		}
-	})
-})
+	});
+
+});
