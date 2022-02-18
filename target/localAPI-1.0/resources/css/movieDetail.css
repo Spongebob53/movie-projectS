@@ -1,7 +1,6 @@
 /*****************************
 *********** 배너 영역 **********/
 .movie-detail_banner {
-	margin-top: 122px;
 	height: 350px;
 	background-color: black;
 	display: flex;
@@ -35,81 +34,97 @@
 
 /*****************************
 *********** 메인 영역 **********/
-.movie-detail_main {
+.movie-detail {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.movie-detail_in {
 	width: 1100px;
-	margin: 60px auto 0;
+	margin-top: 60px;
 }
 
 /*****************************
 *********** 상단 영역 **********/
 .detail-top {
 	padding-left: 320px;
+	padding-bottom: 40px;
 	position: relative;
 }
 
+/*********** 영화 포스터 **********/
 .movie-poster {
 	width: 260px;
 	height: 400px;
-	background-color: lightgray;
 	border-radius: 15px;
 	position: absolute;
-	display: block;
 	left: 0;
 	top: -130px;
+	box-shadow: 5px 5px 10px 0 rgb(0 0 0/ 40%);
 }
 
 .movie-poster img {
 	width: 100%;
 	height: 100%;
 	border-radius: 15px;
-	display: inline-block;
+}
+
+/*********** 영화 정보 **********/
+.movie-info {
+	display: flex;
+	flex-direction: column;
+	height: 230px;
+	justify-content: space-between;
 }
 
 .movie-info_title {
-	margin-bottom: 30px;
-}
-
-.movie-info_title span {
-	display: block;
-}
-
-.title-eng {
-	margin-top: 6px;
+	display: flex;
+	height: 50px;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .movie-info strong {
-	padding-left: 10px;
+	padding: 8px;
 }
 
 .movie-info button {
-	float: right;
+	position: absolute;
+	right: 0;
+}
+
+.movie-info button:hover {
+	border: 1px solid rgb(90, 74, 227);
+}
+
+.movie-info button ~button {
+	position: absolute;
+	top: 50px;
+	right: 0;
 }
 
 .movie-info_detail1 {
-	overflow: auto;
-	margin-bottom: 30px;
-	padding-bottom: 30px;
+	display: flex;
+	height: 50px;
 	border-bottom: 1px solid #ddd;
 }
 
-.movie-info_detail1 li {
-	float: left;
+.movie-info_detail1 li:first-child strong:before {
+	content: url("/resources/img/star-fill.svg");
+	padding-right: 5px;
 }
 
 .movie-info_detail1 li:after {
 	content: '';
-	margin: 0 30px;
+	margin: 0 10px;
 }
 
 .movie-info_detail2 {
-	width: 600px;
-	display: inline-block;
-}
-
-.movie-info_detail2 li {
-	margin-bottom: 15px;
-	color: #222;
-	line-height: 17px;
+	display: flex;
+	height: 70px;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 /*****************************
@@ -120,16 +135,20 @@
 
 .movie-tab_info {
 	margin-top: 70px;
+	display: flex;
+	flex-direction: column;
 }
 
 .info_titile {
+	display: flex;
+	justify-content: space-between;
 	margin-bottom: 30px;
-	display: block;
 }
 
-.info_text {
-	line-height: 18px;
-	text-overflow: ellipsis;
+.synopsis-text {
+	height: 120px;
+	overflow: scroll;
+	line-height: 17px;
 }
 
 /*********** 시놉시스 영역 **********/
@@ -146,7 +165,6 @@
 
 .trailer-slide_box {
 	width: 940px;
-	height: 230px;
 	display: flex;
 	justify-content: space-between;
 	overflow: overlay;
@@ -156,9 +174,9 @@
 .trailer-card {
 	width: 296px;
 	height: 200px;
-	background-color: #ddd;
 	border-radius: 15px;
 	display: flex;
+	cursor: pointer;
 }
 
 .trailer-card img {
@@ -170,7 +188,7 @@
 .trailer_btn {
 	width: 296px;
 	height: 200px;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 15px;
 	display: flex;
 	position: absolute;
@@ -244,7 +262,7 @@
 	width: 100%;
 	height: 100%;
 	border-radius: 15px;
-	opacity: 0.5;
+	opacity: 0.75;
 }
 
 .thumb-list-box .slick-list {

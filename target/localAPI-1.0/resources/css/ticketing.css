@@ -10,6 +10,9 @@ main {
     height: 50px;
     border-radius: 15px;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
@@ -50,6 +53,11 @@ main {
     height: 40px;
 }
 
+.theater-theaters{
+    box-sizing: border-box;
+    overflow: auto;
+}
+
 .movie-container {
     display: grid;
     grid-template-rows: 50px 1fr;
@@ -60,6 +68,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.movies{
+    overflow: auto;
 }
 
 .movies-item {
@@ -85,7 +97,7 @@ main {
 .time-container_theater {
     padding: 20px;
     display: grid;
-    grid-template-columns: 50px 50px 50px;
+    grid-template-columns: 120px 120px 120px;
 }
 
 .time-container_theater-movie {
@@ -103,6 +115,7 @@ main {
     justify-content: space-around;
     align-items: center;
     border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .book-process {

@@ -7,10 +7,10 @@
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
         <!--wallet 개인 경로 지정 부탁드려요, ADMIN=wallet 설치 경로-->
-             <property name="url" value="jdbc:oracle:thin:@db202201202020_high?TNS_ADMIN=/Users/spongebob53/Oracle/instantclient/network/Wallet_DB202201202020"/>
-<!--      <property name="url" value="jdbc:oracle:thin:@db202201202020_high?TNS_ADMIN=/Users/iyxuna/Downloads/Wallet_DB202201202020"/>-->
-<!--       <property name="url" value="jdbc:oracle:thin:@db202201202020_high?TNS_ADMIN=\\Users\\pc\\Desktop\\movie\\Wallet_DB202201202020"/>-->
-<!--			<property name="url" value="jdbc:oracle:thin:@db202201202020_high?TNS_ADMIN=\\Users\\user\\Desktop\\Wallet_DB202201202020"/>-->
+              <property name="url" value="jdbc:oracle:thin:@db202201202020_high?TNS_ADMIN=/Users/spongebob53/Oracle/instantclient/network/Wallet_DB202201202020"/>
+<!--      <property name="url" value="jdbc:oracle:thin:@db202201202020_high?TNS_ADMIN=/Users/iyxuna/Downloads/Wallet_DB202201202020"/> -->
+<!--      <property name="url" value="jdbc:oracle:thin:@db202201202020_high?TNS_ADMIN=\\Users\\pc\\Desktop\\movie\\Wallet_DB202201202020"/>-->
+<!-- 			<property name="url" value="jdbc:oracle:thin:@db202201202020_high?TNS_ADMIN=\\Users\\user\\Desktop\\Wallet_DB202201202020"/> -->
         <property name="username" value="admin"/>
         <property name="password" value="1q2w3e4r5t^Y"/>
     </bean>

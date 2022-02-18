@@ -1,3 +1,4 @@
+
 $(function() {
 
 	// 페이지 로드 후 바로 클래스 추가
@@ -51,6 +52,17 @@ $(function() {
 		vertical: true,
 		arrows: false,
 		asNavFor: '.view-list-box',
+	});
+
+	// 스크롤시 고정 네비게이션 나타내기
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop();
+		if (scroll > 50) {
+			$('.fix-navigation').css('display', 'flex');
+		}
+		else {
+			$('.fix-navigation').css('display', 'none');
+		}
 	});
 
 });

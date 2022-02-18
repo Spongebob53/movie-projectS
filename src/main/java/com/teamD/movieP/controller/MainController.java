@@ -47,8 +47,15 @@ public class MainController {
     }
 
     @RequestMapping("joinCustomer")
-    public String joinCustomer(CustomerVO customerVO, CustomerInfoVO customerInfoVO, CustomerTermVO customerTermVO) {
+    public String joinCustomer(CustomerVO customerVO, CustomerInfoVO customerInfoVO, CustomerTermVO customerTermVO, HttpServletResponse response) {
         if (customerService.joinCustomer(customerVO, customerInfoVO, customerTermVO)) {
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (Exception e) {}
+            response.setContentType("text/html; charset=UTF-8");
+            out.println("<script>alert('회원가입이 완료되었습니다.');</script>");
+            out.flush();
             return "redirect:/";
         }
         return "join";

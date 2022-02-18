@@ -13,14 +13,12 @@
     <title>JAVA CINEMA</title>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
-    <script type="text/javascript" src="/resources/js/index.js"></script>
-    
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <link href="/resources/css/reset.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
     <link href="/resources/css/button.css?ver=5" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=5" rel="stylesheet" type="text/css">
-    <link href="/resources/css/header.css?ver=5" rel="stylesheet" type="text/css">
-    <link href="/resources/css/footer.css?ver=5" rel="stylesheet" type="text/css">
     <link href="/resources/css/main.css?ver=5" rel="stylesheet" type="text/css">
     
     <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico" />
@@ -28,105 +26,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-	
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
-
-	<header class="header">
-		<div class="head">
-			<div class="header-search">
-				<button class="btn_search">
-					<i class="bi bi-search"></i>
-				</button>
-			</div>
-			<div class="header-logo">
-				<a href="introduce" data-transition="slideup"><img
-					src="/resources/img/logo/textLogo-color.png" class="logo-medium"></a>
-			</div>
-			<div class="header-member">
-				<c:choose>
-					<c:when test="${sessionScope.customer_id == null}">
-						<a href="login" class=txt-xs>로그인</a>
-						<a href="join" class="txt-xs">회원가입</a>
-					</c:when>
-					<c:when test="${sessionScope.customer_id != null}">
-						<a href="#" class="welcome-text txt-xs">${sessionScope.customer_id}님
-							반갑습니다 :)</a>
-						<a href="logout" class="txt-xs">로그아웃</a>
-					</c:when>
-				</c:choose>
-				<a href="#" class="txt-xs">고객센터</a>
-			</div>
-		</div>
-		<ul class="nav">
-			<li><a href="#" class="txt-md">영화</a>
-				<ul>
-					<li><a href="#" class="txt-sm">현재상영작</a></li>
-					<li><a href="#" class="txt-sm">상영예정작</a></li>
-				</ul></li>
-			<li><a href="ticketing" class="txt-md">예매</a>
-				<ul>
-					<li><a href="ticketing" class="txt-sm">빠른예매</a></li>
-					<li><a href="#" class="txt-sm">상영시간표</a></li>
-				</ul></li>
-			<li><a href="#" class="txt-md">극장</a>
-				<ul>
-					<li><a href="#" class="txt-sm">전체극장</a></li>
-					<li><a href="#" class="txt-sm">특별관</a></li>
-				</ul></li>
-			<li><a href="#" class="txt-md">이벤트</a>
-				<ul>
-					<li><a href="#" class="txt-sm">영화/예매</a></li>
-					<li><a href="#" class="txt-sm">당첨자발표</a></li>
-					<li><a href="#" class="txt-sm">종료 이벤트</a></li>
-				</ul></li>
-			<li><a href="#" class="txt-md">혜택</a>
-				<ul>
-					<li><a href="#" class="txt-sm">멤버십/CLUB</a></li>
-					<li><a href="#" class="txt-sm">제휴할인</a></li>
-				</ul></li>
-		</ul>
-	</header>
-
-	<div class="fix-navigation">
-		<div class="fix-navigation_in">
-			<div class="fix-logo">
-				<a href="introduce" data-transition="slideup"> <img
-					src="/resources/img/logo/textLogo-white.png" class="logo-small"></a>
-			</div>
-			<ul class="fix-nav">
-				<li><a href="#" class="txt-md">영화</a>
-					<ul>
-						<li><a href="#" class="txt-sm">현재상영작</a></li>
-						<li><a href="#" class="txt-sm">상영예정작</a></li>
-					</ul></li>
-				<li><a href="ticketing" class="txt-md">예매</a>
-					<ul>
-						<li><a href="ticketing" class="txt-sm">빠른예매</a></li>
-						<li><a href="#" class="txt-sm">상영시간표</a></li>
-					</ul></li>
-				<li><a href="#" class="txt-md">극장</a>
-					<ul>
-						<li><a href="#" class="txt-sm">전체극장</a></li>
-						<li><a href="#" class="txt-sm">특별관</a></li>
-					</ul></li>
-				<li><a href="#" class="txt-md">이벤트</a>
-					<ul>
-						<li><a href="#" class="txt-sm">영화/예매</a></li>
-						<li><a href="#" class="txt-sm">당첨자발표</a></li>
-						<li><a href="#" class="txt-sm">종료 이벤트</a></li>
-					</ul></li>
-				<li><a href="#" class="txt-md">혜택</a>
-					<ul>
-						<li><a href="#" class="txt-sm">멤버십/CLUB</a></li>
-						<li><a href="#" class="txt-sm">제휴할인</a></li>
-					</ul></li>
-			</ul>
-		</div>
-	</div>
+	<jsp:include page="header.jsp"/>
 
 	<section class="main-banner">
 		<div class="main-banner_in">
@@ -219,36 +123,8 @@
    		</div>
    	</div>
 
-	<footer class="footer">
-    	<div class="footer_in">
-    		<div class="footer-logo">
-				<a href="/"><img src="/resources/img/logo/textLogo-gray.png" class="logo-medium"></a>
-			</div>
-    		<div class="footer-info">
-				<div class="footer-info_top">
-					<ul>
-						<li><a href="#" class="txt-xs">기업정보</a></li>
-						<li><a href="#" class="txt-xs">채용정보</a></li>
-						<li><a href="#" class="txt-xs">광고/제휴문의</a></li>
-						<li><a href="#" class="txt-xs">이메일무단수집거부</a></li>
-						<li><a href="#" class="txt-xs">이용약관</a></li>
-						<li><a href="#" class="txt-xs">개인정보처리방침</a></li>
-						<li><a href="#" class="txt-xs">윤리경영</a></li>
-						<li><a href="#" class="txt-xs">사이버감사실</a></li>
-					</ul>
-				</div>
-				<div class="footer-info_bottom">
-					<address class="txt-xs">(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</address>
-					<ul>
-						<li class="txt-xs">대표이사 : 신승용</li>
-						<li class="txt-xs">사업자등록번호 : 000-00-00000</li>
-						<li class="txt-xs">통신판매업신고번호 : 2022-휴먼교육센터-0203</li>
-					</ul>
-					<p class="footer-inner_copyright txt-xs">© CJ CGV. All Rights Reserved</p>
-				</div>
-			</div>
-    	</div>
-    </footer>
+	<jsp:include page="footer.jsp"/>
 
+	<script type="text/javascript" src="/resources/js/index.js"></script>
 </body>
 </html>
