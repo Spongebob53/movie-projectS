@@ -29,6 +29,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+<script type="text/javascript">
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop();
+		if (scroll > 50) {
+			$('.fix-navigation').css('display', 'flex');
+		} else {
+			$('.fix-navigation').css('display', 'none');
+		}
+	});
+</script>
+
 </head>
 <body>
 
@@ -40,7 +52,7 @@
 				</button>
 			</div>
 			<div class="header-logo">
-				<a href="introduce" data-transition="slideup"><img
+				<a href="/" data-transition="slideup"><img
 					src="/resources/img/logo/textLogo-color.png" class="logo-medium"></a>
 			</div>
 			<div class="header-member">
