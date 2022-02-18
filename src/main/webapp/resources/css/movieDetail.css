@@ -1,7 +1,7 @@
 /*****************************
 *********** 배너 영역 **********/
 .movie-detail_banner {
-	margin-top: 122px;
+/* 	margin-top: 122px; */
 	height: 350px;
 	background-color: black;
 	display: flex;

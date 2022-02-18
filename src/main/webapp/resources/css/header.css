@@ -6,13 +6,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 80px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 200;
+	height: 132px;
+	/* 	position: fixed; */
+	/* 	top: 0; */
+	/* 	left: 0; */
+	/* 	right: 0; */
+		z-index: 200;
 	background-color: white;
+	flex-direction: column;
 }
 
 .head {
@@ -47,6 +48,10 @@
 	font-weight: 700;
 }
 
+.hr {
+	border: 1px solid #ddd;
+}
+
 /*****************************
 *********** 네비 영역 **********/
 .navigation {
@@ -55,15 +60,16 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: fixed;
-	top: 81px;
-	left: 0;
-	right: 0;
-	z-index: 200;
+	/* 	position: fixed; */
+	/* 	top: 81px; */
+	/* 	left: 0; */
+	/* 	right: 0; */
+		z-index: 200;
 	background-color: white;
 }
 
 .nav {
+	border-top: 1px solid #ddd;
 	width: 1200px;
 	height: 50px;
 	z-index: 100;
@@ -93,7 +99,7 @@
 .nav li ul {
 	background-color: white;
 	display: none;
-	border-top: 2px solid rgb(90, 74, 227);
+	border-top: 1px solid rgb(90, 74, 227);
 	width: 240px;
 }
 
@@ -102,6 +108,86 @@
 }
 
 .nav li ul a:hover, .nav li ul li:hover a:after {
+	font-size: 16px;
+	content: '•';
+	margin-left: 10px;
+}
+
+/*****************************
+*********** 고정 네비 **********/
+.fix-navigation {
+	text-align: center;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 300;
+	background-color: rgb(90, 74, 227);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+/* 	z-index: 5; */
+}
+
+.fix-navigation_in {
+	width: 1200px;
+	height: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.fix-nav {
+	width: 950px;
+	height: 70px;
+	z-index: 100;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.fix-nav ul {
+	overflow: auto;
+}
+
+.fix-nav li {
+	float: left;
+	width: 200px;
+}
+
+.fix-nav li a {
+	display: block;
+	line-height: 70px;
+	text-align: center;
+	color: #fff;
+}
+
+.fix-nav li ul {
+	background-color: white;
+	display: none;
+	border-bottom: 2px solid rgb(90, 74, 227);
+	width: 200px;
+}
+
+.fix-nav li ul li a {
+	color: rgb(90, 74, 227);
+	line-height: 60px;
+}
+
+.fix-nav li:hover .txt-md {
+	font-weight: 700;
+	color: #fff;
+}
+
+.fix-nav ul li:hover a {
+	font-weight: 700;
+	color: rgb(90, 74, 227);
+}
+
+.fix-nav li:hover ul {
+	display: block;
+}
+
+.fix-nav li ul a:hover, .fix-nav li ul li:hover a:after {
 	font-size: 16px;
 	content: '•';
 	margin-left: 10px;
