@@ -22,6 +22,20 @@ $(document).ready(function() {
 	});
 });
 
+// 스크롤시 고정 네비게이션 나타내기
+$(document).ready(function() {
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop();
+		if (scroll > 50) {
+			$('.fix-navigation').css('display', 'flex');
+		}
+		else {
+			$('.fix-navigation').css('display', 'none');
+		}
+	})
+})
+
+
 $(function() {
 
 	// 메인배너에서 상세정보 클릭 시
@@ -33,8 +47,6 @@ $(function() {
 	$('.main-banner_btn .btn_movie-ticketing').click(function() {
 		$(location).attr('href', 'ticketing');
 	});
-
-
 
 });
 
