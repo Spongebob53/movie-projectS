@@ -7,7 +7,7 @@ $(function() {
 	let movie_id;
 	// 지역선택
 	$('.theater-areas_item').click(function(){
-
+	
 		area_id = $(this).val();
 		
 		$.ajax( {
@@ -136,6 +136,8 @@ $(function() {
 	// 좌석선택 눌렀을시 체크
 	$('.book-process_submit').click(function(){
 		
+		
+		
 		if(theater_choice == 0) {
 			alert("극장을 선택해주세요");
 			return false;
@@ -144,7 +146,7 @@ $(function() {
 			alert("영화를 선택해주세요");
 			return false;
 		}
-		else if(sessionStorage.getItem("customer_id") != null) {
+		else if($(this).val() == "") {
 			if(confirm("로그인이 필요한 서비스입니다\n로그인 페이지로 이동하시겠습니까?") == true){
 				$('.book-process').attr("action","login");
 			} else {

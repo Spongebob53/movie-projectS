@@ -19,11 +19,16 @@
         FROM theater
         WHERE theater_id LIKE '0${area_id}%'
     </select>
-    <!-- 상영 정보 불러오기 -->
+    <!-- 영화 시간 불러오기 -->
     <select id="ticketing_movie_time" parameterType="theaterShow" resultType="theaterShow">
        SELECT movie_show_id, to_char(show_start, 'HH24:MI') AS show_start, room_name, room_seat,movie_title
        FROM movie_show NATURAL JOIN room NATURAL JOIN movie
        WHERE movie_id = '00000${movie_id}' AND room_id LIKE '0${theater_id}%'
     </select>
+	<!-- 예매하기 -->
+    <insert id="book_seat" parameterType="theaterBook">
+    	INSERT INTO book(book_id, customer_id)
+    	VALUES (#{book_id}, #{customer_id})
+    </insert>
 
 </mapper>

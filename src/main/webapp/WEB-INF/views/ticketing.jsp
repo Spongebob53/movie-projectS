@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Insert title here</title>
+    <title>예매</title>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico"/>
     <link href="/resources/css/reset.css?ver=2" rel="stylesheet" type="text/css">
@@ -128,7 +128,7 @@
 				<div>></div>
 				<div class="book-process_time">선택한 시간</div>
 				<div>></div>
-				<button class="book-process_submit">좌석 선택</button>
+				<button class="book-process_submit" value="${sessionScope.customer_id}">좌석 선택</button>
 			</form>
 		</section>
 	</main>
