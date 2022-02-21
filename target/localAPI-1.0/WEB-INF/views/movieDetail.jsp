@@ -12,16 +12,14 @@
     <title>${movie.movie_title}</title>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
-    <script type="text/javascript" src="/resources/js/movieDetail.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico"/>
-
     <link href="/resources/css/reset.css?ver=3" rel="stylesheet" type="text/css">
     <link href="/resources/css/button.css?ver=5" rel="stylesheet" type="text/css">
     <link href="/resources/css/text.css?ver=4" rel="stylesheet" type="text/css">
     <link href="/resources/css/logo.css?ver=4" rel="stylesheet" type="text/css">
-    <link href="/resources/css/movieDetail.css?ver=6" rel="stylesheet" type="text/css">
+    <link href="/resources/css/movieDetail.css?ver=9" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -180,6 +178,6 @@
 </main>
 
 <jsp:include page="footer.jsp"/>
-
+<script type="text/javascript" src="/resources/js/movieDetail.js"></script>
 </body>
 </html>

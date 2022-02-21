@@ -251,8 +251,8 @@
 }
 
 .thumb-card {
-	width: 160px;
-	height: 100px;
+	width: 160px !important;
+	height: 100px !important;
 	border-radius: 15px;
 	cursor: pointer;
 	background-color: #fff;

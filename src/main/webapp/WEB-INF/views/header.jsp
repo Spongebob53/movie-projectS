@@ -14,11 +14,6 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <link href="/resources/css/reset.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/text.css?ver=2" rel="stylesheet" type="text/css">
-    <link href="/resources/css/button.css?ver=5" rel="stylesheet" type="text/css">
-    <link href="/resources/css/logo.css?ver=5" rel="stylesheet" type="text/css">
     <link href="/resources/css/header.css?ver=5" rel="stylesheet" type="text/css">
 
     <link rel="shortcut icon" type="image/x-icon" href="/resources/img/logo/logo-color.ico"/>
@@ -134,6 +129,6 @@
     </div>
 </div>
 
-<script type="text/javascript" src="/resources/js/index.js"></script>
+<%--<script type="text/javascript" src="/resources/js/index.js"></script>--%>
 </body>
 </html>
